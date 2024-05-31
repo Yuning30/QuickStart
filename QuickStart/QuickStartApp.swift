@@ -6,12 +6,40 @@
 //
 
 import SwiftUI
+import SettingsAccess
 
 @main
 struct QuickStartApp: App {
     var body: some Scene {
-        WindowGroup {
-            ContentView()
+        Settings {
+            SettingsView()
+        }
+        MenuBarExtra("Loop", systemImage: "hammer") {
+            SettingsLink(
+                label: {
+                    Text("Settings…")
+                },
+                preAction: {
+                    for window in NSApp.windows where window.toolbar?.items != nil {
+                        window.close()
+                    }
+                },
+                postAction: {
+                    for window in NSApp.windows where window.toolbar?.items != nil {
+                        window.orderFrontRegardless()
+                        window.center()
+                    }
+                }
+            )
+            .keyboardShortcut(",", modifiers: .command)
+            
+            
+            Divider()
+            
+            Button("Quit") {
+                NSApp.terminate(nil)
+            }
+            .keyboardShortcut("q", modifiers: .command)
         }
     }
 }
