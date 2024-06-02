@@ -17,7 +17,7 @@ struct SettingsView: View {
                 Text("change")
             }
             Text("abc")
-//            RadialMenuView()
+            RadialMenuView()
         }
     }
 }

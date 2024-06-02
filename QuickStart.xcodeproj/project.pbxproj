@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3EA6B5D22C0D0EEC0093F9C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA6B5D12C0D0EEC0093F9C2 /* AppDelegate.swift */; };
+		3EA6B5D42C0D0F450093F9C2 /* LoopManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA6B5D32C0D0F450093F9C2 /* LoopManager.swift */; };
+		3EA6B5D72C0D0F890093F9C2 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA6B5D62C0D0F890093F9C2 /* EventMonitor.swift */; };
+		3EA6B5DA2C0D10330093F9C2 /* KeybindMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA6B5D92C0D10330093F9C2 /* KeybindMonitor.swift */; };
+		3EA6B5DC2C0D10A30093F9C2 /* RadialMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA6B5DB2C0D10A30093F9C2 /* RadialMenuController.swift */; };
+		3EA6B5DE2C0D11BD0093F9C2 /* ActionDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA6B5DD2C0D11BD0093F9C2 /* ActionDirection.swift */; };
+		3EA6B5E12C0D17030093F9C2 /* CGGeometry+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA6B5E02C0D17030093F9C2 /* CGGeometry+Extensions.swift */; };
+		3EA6B5E42C0D1D0D0093F9C2 /* Notification+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA6B5E32C0D1D0D0093F9C2 /* Notification+Extensions.swift */; };
+		3EA6B5E62C0D1DDA0093F9C2 /* CGKeyCode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA6B5E52C0D1DDA0093F9C2 /* CGKeyCode+Extensions.swift */; };
+		3EA6B5E82C0D1E420093F9C2 /* NSEvent+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA6B5E72C0D1E420093F9C2 /* NSEvent+Extensions.swift */; };
+		3EA6B5EA2C0D1F310093F9C2 /* PermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA6B5E92C0D1F310093F9C2 /* PermissionManager.swift */; };
+		3EA6B5EC2C0D1F680093F9C2 /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA6B5EB2C0D1F680093F9C2 /* Bundle+Extensions.swift */; };
 		3EF6A0232C09B71200BB4436 /* QuickStartApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3833432C097D5500561087 /* QuickStartApp.swift */; };
 		3EF6A0262C09B74400BB4436 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 3EF6A0252C09B74400BB4436 /* Algorithms */; };
 		3EF6A0282C09B74400BB4436 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = 3EF6A0272C09B74400BB4436 /* Defaults */; };
@@ -30,6 +42,18 @@
 		3E38335A2C09A37F00561087 /* DirectionSelectorSquareSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionSelectorSquareSegment.swift; sourceTree = "<group>"; };
 		3E38335F2C09A68400561087 /* Angle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Angle+Extensions.swift"; sourceTree = "<group>"; };
 		3E38336D2C09AFC700561087 /* QuickStart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickStart.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EA6B5D12C0D0EEC0093F9C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3EA6B5D32C0D0F450093F9C2 /* LoopManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopManager.swift; sourceTree = "<group>"; };
+		3EA6B5D62C0D0F890093F9C2 /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
+		3EA6B5D92C0D10330093F9C2 /* KeybindMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeybindMonitor.swift; sourceTree = "<group>"; };
+		3EA6B5DB2C0D10A30093F9C2 /* RadialMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialMenuController.swift; sourceTree = "<group>"; };
+		3EA6B5DD2C0D11BD0093F9C2 /* ActionDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionDirection.swift; sourceTree = "<group>"; };
+		3EA6B5E02C0D17030093F9C2 /* CGGeometry+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGGeometry+Extensions.swift"; sourceTree = "<group>"; };
+		3EA6B5E32C0D1D0D0093F9C2 /* Notification+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extensions.swift"; sourceTree = "<group>"; };
+		3EA6B5E52C0D1DDA0093F9C2 /* CGKeyCode+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGKeyCode+Extensions.swift"; sourceTree = "<group>"; };
+		3EA6B5E72C0D1E420093F9C2 /* NSEvent+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSEvent+Extensions.swift"; sourceTree = "<group>"; };
+		3EA6B5E92C0D1F310093F9C2 /* PermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionManager.swift; sourceTree = "<group>"; };
+		3EA6B5EB2C0D1F680093F9C2 /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +90,12 @@
 		3E3833422C097D5500561087 /* QuickStart */ = {
 			isa = PBXGroup;
 			children = (
+				3EA6B5D12C0D0EEC0093F9C2 /* AppDelegate.swift */,
 				3E3833432C097D5500561087 /* QuickStartApp.swift */,
+				3EA6B5E22C0D170D0093F9C2 /* Extensions */,
+				3EA6B5DF2C0D11C40093F9C2 /* Action Management */,
+				3EA6B5D82C0D0F930093F9C2 /* Utilities */,
+				3EA6B5D52C0D0F4C0093F9C2 /* Managers */,
 				3E3833542C09807D00561087 /* Settings */,
 				3E3833572C09A2CB00561087 /* RadialMenu */,
 				3E3833472C097D5700561087 /* Assets.xcassets */,
@@ -97,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				3E3833552C09A2C600561087 /* RadialMenuView.swift */,
+				3EA6B5DB2C0D10A30093F9C2 /* RadialMenuController.swift */,
 				3E3833582C09A35000561087 /* DirectionSelectorCirCleSegment.swift */,
 				3E38335A2C09A37F00561087 /* DirectionSelectorSquareSegment.swift */,
 			);
@@ -109,6 +139,44 @@
 				3E38335F2C09A68400561087 /* Angle+Extensions.swift */,
 			);
 			path = Extentions;
+			sourceTree = "<group>";
+		};
+		3EA6B5D52C0D0F4C0093F9C2 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				3EA6B5D32C0D0F450093F9C2 /* LoopManager.swift */,
+				3EA6B5E92C0D1F310093F9C2 /* PermissionManager.swift */,
+				3EA6B5D92C0D10330093F9C2 /* KeybindMonitor.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		3EA6B5D82C0D0F930093F9C2 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3EA6B5D62C0D0F890093F9C2 /* EventMonitor.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		3EA6B5DF2C0D11C40093F9C2 /* Action Management */ = {
+			isa = PBXGroup;
+			children = (
+				3EA6B5DD2C0D11BD0093F9C2 /* ActionDirection.swift */,
+			);
+			path = "Action Management";
+			sourceTree = "<group>";
+		};
+		3EA6B5E22C0D170D0093F9C2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3EA6B5E02C0D17030093F9C2 /* CGGeometry+Extensions.swift */,
+				3EA6B5E32C0D1D0D0093F9C2 /* Notification+Extensions.swift */,
+				3EA6B5E52C0D1DDA0093F9C2 /* CGKeyCode+Extensions.swift */,
+				3EA6B5EB2C0D1F680093F9C2 /* Bundle+Extensions.swift */,
+				3EA6B5E72C0D1E420093F9C2 /* NSEvent+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		3EF6A0242C09B74400BB4436 /* Frameworks */ = {
@@ -197,10 +265,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EA6B5EA2C0D1F310093F9C2 /* PermissionManager.swift in Sources */,
 				3EF6A02C2C09B76600BB4436 /* RadialMenuView.swift in Sources */,
+				3EA6B5E82C0D1E420093F9C2 /* NSEvent+Extensions.swift in Sources */,
+				3EA6B5EC2C0D1F680093F9C2 /* Bundle+Extensions.swift in Sources */,
+				3EA6B5D42C0D0F450093F9C2 /* LoopManager.swift in Sources */,
+				3EA6B5DC2C0D10A30093F9C2 /* RadialMenuController.swift in Sources */,
+				3EA6B5DE2C0D11BD0093F9C2 /* ActionDirection.swift in Sources */,
+				3EA6B5E12C0D17030093F9C2 /* CGGeometry+Extensions.swift in Sources */,
 				3EF6A02F2C09B77000BB4436 /* Angle+Extensions.swift in Sources */,
+				3EA6B5DA2C0D10330093F9C2 /* KeybindMonitor.swift in Sources */,
 				3EF6A0232C09B71200BB4436 /* QuickStartApp.swift in Sources */,
 				3EF6A02D2C09B76900BB4436 /* DirectionSelectorCirCleSegment.swift in Sources */,
+				3EA6B5D22C0D0EEC0093F9C2 /* AppDelegate.swift in Sources */,
+				3EA6B5E42C0D1D0D0093F9C2 /* Notification+Extensions.swift in Sources */,
+				3EA6B5E62C0D1DDA0093F9C2 /* CGKeyCode+Extensions.swift in Sources */,
+				3EA6B5D72C0D0F890093F9C2 /* EventMonitor.swift in Sources */,
 				3EF6A02B2C09B76200BB4436 /* SettingsView.swift in Sources */,
 				3EF6A02E2C09B76B00BB4436 /* DirectionSelectorSquareSegment.swift in Sources */,
 			);
@@ -341,6 +421,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -368,6 +449,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
