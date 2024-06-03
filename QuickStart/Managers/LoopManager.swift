@@ -268,6 +268,10 @@ class LoopManager: ObservableObject {
 
         currentlyPressedModifiers = []
 
+        if currentAction != .noAction, isLoopActive {
+            ActionEngine.executeAction(direction: currentAction)
+        }
+        
         isLoopActive = false
         LoopManager.sidesToAdjust = nil
         LoopManager.lastTargetFrame = .zero
