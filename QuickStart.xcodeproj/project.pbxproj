@@ -19,6 +19,7 @@
 		3EA6B5E82C0D1E420093F9C2 /* NSEvent+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA6B5E72C0D1E420093F9C2 /* NSEvent+Extensions.swift */; };
 		3EA6B5EA2C0D1F310093F9C2 /* PermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA6B5E92C0D1F310093F9C2 /* PermissionManager.swift */; };
 		3EA6B5EC2C0D1F680093F9C2 /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA6B5EB2C0D1F680093F9C2 /* Bundle+Extensions.swift */; };
+		3EA6B5EE2C0D437B0093F9C2 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA6B5ED2C0D437B0093F9C2 /* View+Extensions.swift */; };
 		3EF6A0232C09B71200BB4436 /* QuickStartApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3833432C097D5500561087 /* QuickStartApp.swift */; };
 		3EF6A0262C09B74400BB4436 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 3EF6A0252C09B74400BB4436 /* Algorithms */; };
 		3EF6A0282C09B74400BB4436 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = 3EF6A0272C09B74400BB4436 /* Defaults */; };
@@ -54,6 +55,7 @@
 		3EA6B5E72C0D1E420093F9C2 /* NSEvent+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSEvent+Extensions.swift"; sourceTree = "<group>"; };
 		3EA6B5E92C0D1F310093F9C2 /* PermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionManager.swift; sourceTree = "<group>"; };
 		3EA6B5EB2C0D1F680093F9C2 /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
+		3EA6B5ED2C0D437B0093F9C2 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +101,6 @@
 				3E3833542C09807D00561087 /* Settings */,
 				3E3833572C09A2CB00561087 /* RadialMenu */,
 				3E3833472C097D5700561087 /* Assets.xcassets */,
-				3E3833612C09A68900561087 /* Extentions */,
 				3E38334C2C097D5700561087 /* QuickStart.entitlements */,
 				3E3833492C097D5700561087 /* Preview Content */,
 			);
@@ -133,14 +134,6 @@
 			path = RadialMenu;
 			sourceTree = "<group>";
 		};
-		3E3833612C09A68900561087 /* Extentions */ = {
-			isa = PBXGroup;
-			children = (
-				3E38335F2C09A68400561087 /* Angle+Extensions.swift */,
-			);
-			path = Extentions;
-			sourceTree = "<group>";
-		};
 		3EA6B5D52C0D0F4C0093F9C2 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +163,8 @@
 		3EA6B5E22C0D170D0093F9C2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				3E38335F2C09A68400561087 /* Angle+Extensions.swift */,
+				3EA6B5ED2C0D437B0093F9C2 /* View+Extensions.swift */,
 				3EA6B5E02C0D17030093F9C2 /* CGGeometry+Extensions.swift */,
 				3EA6B5E32C0D1D0D0093F9C2 /* Notification+Extensions.swift */,
 				3EA6B5E52C0D1DDA0093F9C2 /* CGKeyCode+Extensions.swift */,
@@ -239,6 +234,7 @@
 				3E38335C2C09A5B200561087 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
 				3E3833622C09A82900561087 /* XCRemoteSwiftPackageReference "Defaults" */,
 				3E3833652C09AAB400561087 /* XCRemoteSwiftPackageReference "SettingsAccess" */,
+				3E61657E2C0D4E4B00C1F048 /* XCRemoteSwiftPackageReference "SwiftLint" */,
 			);
 			productRefGroup = 3E3833412C097D5500561087 /* Products */;
 			projectDirPath = "";
@@ -276,6 +272,7 @@
 				3EF6A02F2C09B77000BB4436 /* Angle+Extensions.swift in Sources */,
 				3EA6B5DA2C0D10330093F9C2 /* KeybindMonitor.swift in Sources */,
 				3EF6A0232C09B71200BB4436 /* QuickStartApp.swift in Sources */,
+				3EA6B5EE2C0D437B0093F9C2 /* View+Extensions.swift in Sources */,
 				3EF6A02D2C09B76900BB4436 /* DirectionSelectorCirCleSegment.swift in Sources */,
 				3EA6B5D22C0D0EEC0093F9C2 /* AppDelegate.swift in Sources */,
 				3EA6B5E42C0D1D0D0093F9C2 /* Notification+Extensions.swift in Sources */,
@@ -509,6 +506,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.4.0;
+			};
+		};
+		3E61657E2C0D4E4B00C1F048 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.55.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
