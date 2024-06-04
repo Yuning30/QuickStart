@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		3E6165802C0D502400C1F048 /* ActionEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E61657F2C0D502400C1F048 /* ActionEngine.swift */; };
+		3E76B25A2C0F6E7700794406 /* RadialMenuSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76B2592C0F6E7700794406 /* RadialMenuSettingsView.swift */; };
+		3E76B25C2C0FCBA900794406 /* ActionConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76B25B2C0FCBA900794406 /* ActionConfigurationView.swift */; };
+		3E76B25F2C0FD4F400794406 /* SFSymbolsPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 3E76B25E2C0FD4F400794406 /* SFSymbolsPicker */; };
+		3E76B2622C0FD84C00794406 /* SymbolPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 3E76B2612C0FD84C00794406 /* SymbolPicker */; };
 		3E9D68262C0E875100A6CDA4 /* CircleSegmentWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9D68252C0E875100A6CDA4 /* CircleSegmentWithImage.swift */; };
 		3E9D68282C0EB6BA00A6CDA4 /* CircleSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9D68272C0EB6BA00A6CDA4 /* CircleSegment.swift */; };
 		3E9D682A2C0EC8A800A6CDA4 /* Defaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9D68292C0EC8A800A6CDA4 /* Defaults+Extensions.swift */; };
 		3E9D682C2C0ECB7500A6CDA4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9D682B2C0ECB7500A6CDA4 /* SettingsView.swift */; };
 		3E9D682F2C0ECD1B00A6CDA4 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 3E9D682E2C0ECD1B00A6CDA4 /* Sparkle */; };
 		3E9D68312C0ECDB700A6CDA4 /* GeneralSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9D68302C0ECDB700A6CDA4 /* GeneralSettingsView.swift */; };
+		3E9D68332C0ED88A00A6CDA4 /* MoreSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9D68322C0ED88A00A6CDA4 /* MoreSettingsView.swift */; };
+		3E9D68352C0ED8AF00A6CDA4 /* SoftwareUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9D68342C0ED8AF00A6CDA4 /* SoftwareUpdater.swift */; };
 		3EA6B5D22C0D0EEC0093F9C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA6B5D12C0D0EEC0093F9C2 /* AppDelegate.swift */; };
 		3EA6B5D42C0D0F450093F9C2 /* LoopManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA6B5D32C0D0F450093F9C2 /* LoopManager.swift */; };
 		3EA6B5D72C0D0F890093F9C2 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA6B5D62C0D0F890093F9C2 /* EventMonitor.swift */; };
@@ -49,11 +55,15 @@
 		3E38335F2C09A68400561087 /* Angle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Angle+Extensions.swift"; sourceTree = "<group>"; };
 		3E38336D2C09AFC700561087 /* QuickStart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickStart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E61657F2C0D502400C1F048 /* ActionEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionEngine.swift; sourceTree = "<group>"; };
+		3E76B2592C0F6E7700794406 /* RadialMenuSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialMenuSettingsView.swift; sourceTree = "<group>"; };
+		3E76B25B2C0FCBA900794406 /* ActionConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionConfigurationView.swift; sourceTree = "<group>"; };
 		3E9D68252C0E875100A6CDA4 /* CircleSegmentWithImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleSegmentWithImage.swift; sourceTree = "<group>"; };
 		3E9D68272C0EB6BA00A6CDA4 /* CircleSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleSegment.swift; sourceTree = "<group>"; };
 		3E9D68292C0EC8A800A6CDA4 /* Defaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Defaults+Extensions.swift"; sourceTree = "<group>"; };
 		3E9D682B2C0ECB7500A6CDA4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		3E9D68302C0ECDB700A6CDA4 /* GeneralSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSettingsView.swift; sourceTree = "<group>"; };
+		3E9D68322C0ED88A00A6CDA4 /* MoreSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreSettingsView.swift; sourceTree = "<group>"; };
+		3E9D68342C0ED8AF00A6CDA4 /* SoftwareUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftwareUpdater.swift; sourceTree = "<group>"; };
 		3EA6B5D12C0D0EEC0093F9C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EA6B5D32C0D0F450093F9C2 /* LoopManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopManager.swift; sourceTree = "<group>"; };
 		3EA6B5D62C0D0F890093F9C2 /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
@@ -76,8 +86,10 @@
 			files = (
 				3EF6A02A2C09B74400BB4436 /* SettingsAccess in Frameworks */,
 				3E9D682F2C0ECD1B00A6CDA4 /* Sparkle in Frameworks */,
+				3E76B2622C0FD84C00794406 /* SymbolPicker in Frameworks */,
 				3EF6A0282C09B74400BB4436 /* Defaults in Frameworks */,
 				3EF6A0262C09B74400BB4436 /* Algorithms in Frameworks */,
+				3E76B25F2C0FD4F400794406 /* SFSymbolsPicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +144,9 @@
 			children = (
 				3E9D682B2C0ECB7500A6CDA4 /* SettingsView.swift */,
 				3E9D68302C0ECDB700A6CDA4 /* GeneralSettingsView.swift */,
+				3E9D68322C0ED88A00A6CDA4 /* MoreSettingsView.swift */,
+				3E76B2592C0F6E7700794406 /* RadialMenuSettingsView.swift */,
+				3E76B25B2C0FCBA900794406 /* ActionConfigurationView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -163,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				3EA6B5D62C0D0F890093F9C2 /* EventMonitor.swift */,
+				3E9D68342C0ED8AF00A6CDA4 /* SoftwareUpdater.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -219,6 +235,8 @@
 				3EF6A0272C09B74400BB4436 /* Defaults */,
 				3EF6A0292C09B74400BB4436 /* SettingsAccess */,
 				3E9D682E2C0ECD1B00A6CDA4 /* Sparkle */,
+				3E76B25E2C0FD4F400794406 /* SFSymbolsPicker */,
+				3E76B2612C0FD84C00794406 /* SymbolPicker */,
 			);
 			productName = QuickStart;
 			productReference = 3E38336D2C09AFC700561087 /* QuickStart.app */;
@@ -254,6 +272,8 @@
 				3E3833652C09AAB400561087 /* XCRemoteSwiftPackageReference "SettingsAccess" */,
 				3E61657E2C0D4E4B00C1F048 /* XCRemoteSwiftPackageReference "SwiftLint" */,
 				3E9D682D2C0ECD1B00A6CDA4 /* XCRemoteSwiftPackageReference "Sparkle" */,
+				3E76B25D2C0FD4F400794406 /* XCRemoteSwiftPackageReference "SFSymbolsPicker" */,
+				3E76B2602C0FD84C00794406 /* XCRemoteSwiftPackageReference "SymbolPicker" */,
 			);
 			productRefGroup = 3E3833412C097D5500561087 /* Products */;
 			projectDirPath = "";
@@ -281,9 +301,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EA6B5EA2C0D1F310093F9C2 /* PermissionManager.swift in Sources */,
+				3E76B25C2C0FCBA900794406 /* ActionConfigurationView.swift in Sources */,
 				3E9D68312C0ECDB700A6CDA4 /* GeneralSettingsView.swift in Sources */,
+				3E9D68352C0ED8AF00A6CDA4 /* SoftwareUpdater.swift in Sources */,
 				3E9D68282C0EB6BA00A6CDA4 /* CircleSegment.swift in Sources */,
 				3E9D682C2C0ECB7500A6CDA4 /* SettingsView.swift in Sources */,
+				3E9D68332C0ED88A00A6CDA4 /* MoreSettingsView.swift in Sources */,
 				3EF6A02C2C09B76600BB4436 /* RadialMenuView.swift in Sources */,
 				3EA6B5E82C0D1E420093F9C2 /* NSEvent+Extensions.swift in Sources */,
 				3EA6B5EC2C0D1F680093F9C2 /* Bundle+Extensions.swift in Sources */,
@@ -297,6 +320,7 @@
 				3E6165802C0D502400C1F048 /* ActionEngine.swift in Sources */,
 				3EA6B5DA2C0D10330093F9C2 /* KeybindMonitor.swift in Sources */,
 				3EF6A0232C09B71200BB4436 /* QuickStartApp.swift in Sources */,
+				3E76B25A2C0F6E7700794406 /* RadialMenuSettingsView.swift in Sources */,
 				3EA6B5EE2C0D437B0093F9C2 /* View+Extensions.swift in Sources */,
 				3EF6A02D2C09B76900BB4436 /* DirectionSelectorCirCleSegment.swift in Sources */,
 				3EA6B5D22C0D0EEC0093F9C2 /* AppDelegate.swift in Sources */,
@@ -448,6 +472,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = wyuning.QuickStart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -476,6 +501,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = wyuning.QuickStart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -540,6 +566,22 @@
 				minimumVersion = 0.55.1;
 			};
 		};
+		3E76B25D2C0FD4F400794406 /* XCRemoteSwiftPackageReference "SFSymbolsPicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alessiorubicini/SFSymbolsPicker";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.6;
+			};
+		};
+		3E76B2602C0FD84C00794406 /* XCRemoteSwiftPackageReference "SymbolPicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/xnth97/SymbolPicker.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.3;
+			};
+		};
 		3E9D682D2C0ECD1B00A6CDA4 /* XCRemoteSwiftPackageReference "Sparkle" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sparkle-project/Sparkle";
@@ -551,6 +593,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3E76B25E2C0FD4F400794406 /* SFSymbolsPicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3E76B25D2C0FD4F400794406 /* XCRemoteSwiftPackageReference "SFSymbolsPicker" */;
+			productName = SFSymbolsPicker;
+		};
+		3E76B2612C0FD84C00794406 /* SymbolPicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3E76B2602C0FD84C00794406 /* XCRemoteSwiftPackageReference "SymbolPicker" */;
+			productName = SymbolPicker;
+		};
 		3E9D682E2C0ECD1B00A6CDA4 /* Sparkle */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3E9D682D2C0ECD1B00A6CDA4 /* XCRemoteSwiftPackageReference "Sparkle" */;

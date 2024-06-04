@@ -6,11 +6,31 @@
 //
 
 import SwiftUI
+import Defaults
 
-struct SegmentDescription: Identifiable {
-    var imageName: String
+enum ActionType: String, Codable, CaseIterable, Identifiable {
+    var id: Self { self }
+    
+    case builtin = "Builtin"
+    case shortcuts = "Shortcuts"
+    case application = "Start App"
+    case appleScript = "Run AppleScript"
+}
+
+enum BuiltinActions: String, Identifiable, CaseIterable, Codable {
+    var id: Self { self }
+    
+    case startPause = "Start/Pause"
+    case next = "Next"
+    case previous = "Previous"
+}
+
+struct SegmentDescription: Codable, Identifiable, Hashable, Equatable, Defaults.Serializable {
+    var actionType: ActionType = .builtin
+    var builtinAction: BuiltinActions = .startPause
+    var icon: String
     var angle: Double
-    let id = UUID()
+    var id = UUID()
 }
 
 struct CircleSegmentWithImage: View {
@@ -26,7 +46,7 @@ struct CircleSegmentWithImage: View {
                 ZStack {
                     ZStack {
                         ForEach(segments) { seg in
-                            CircleSegment(angle: seg.angle, radialMenuSize: radialMenuSize, imageName: seg.imageName, color: .blue)
+                            CircleSegment(angle: seg.angle, radialMenuSize: radialMenuSize, icon: seg.icon, color: .blue)
                         }
 
                         Circle()
@@ -50,7 +70,7 @@ struct CircleSegmentWithImage: View {
 }
 
 #Preview {
-    CircleSegmentWithImage(segments: [SegmentDescription(imageName: "square.and.arrow.up.fill", angle: 0), SegmentDescription(imageName: "playpause.circle", angle: 45), SegmentDescription(imageName: "circle.square", angle: 90)])
+    CircleSegmentWithImage(segments: [SegmentDescription(icon: "square.and.arrow.up.fill", angle: 0), SegmentDescription(icon: "playpause.circle", angle: 45), SegmentDescription(icon: "circle.square", angle: 90)])
 }
 
 #Preview {

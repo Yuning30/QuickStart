@@ -1,5 +1,5 @@
 {
-  "originHash" : "10e60f68455a03c5fe54ff1cb10e927666c6058b2bbae2438a87ffaf845b5f32",
+  "originHash" : "4c6abf4af9627065677ec0c49772ee37a884d87e4421def252b67870e834d3a8",
   "pins" : [
     {
       "identity" : "collectionconcurrencykit",
@@ -35,6 +35,15 @@
       "state" : {
         "revision" : "0fd73c8b5892e88acb13adb7f36a4ba9293a0061",
         "version" : "1.4.0"
+      }
+    },
+    {
+      "identity" : "sfsymbolspicker",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/alessiorubicini/SFSymbolsPicker",
+      "state" : {
+        "revision" : "73c909b8a7fc77a30dd04208e33f759f8b52c4c8",
+        "version" : "1.0.6"
       }
     },
     {
@@ -116,6 +125,15 @@
       "state" : {
         "revision" : "a853604c9e9a83ad9954c7e3d2a565273982471f",
         "version" : "7.0.2"
+      }
+    },
+    {
+      "identity" : "symbolpicker",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/xnth97/SymbolPicker.git",
+      "state" : {
+        "revision" : "f82b64bcc3d761c9e63aaa10b1912bba72cbf6d8",
+        "version" : "1.5.3"
       }
     },
     {

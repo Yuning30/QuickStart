@@ -10,7 +10,7 @@ import SwiftUI
 struct CircleSegment: View {
     let angle: Double
     let radialMenuSize: CGFloat
-    let imageName: String
+    let icon: String
     let color: Color
     
     var body: some View {
@@ -18,7 +18,7 @@ struct CircleSegment: View {
             .stroke(Color.black, lineWidth: 1)
             .fill(color)
             .overlay {
-                Image(systemName: imageName)
+                Image(systemName: icon)
                     .rotationEffect(Angle(degrees: angle))
                     .offset(x: 0.45 * radialMenuSize, y: 0)
             }
@@ -27,6 +27,6 @@ struct CircleSegment: View {
 }
 
 #Preview {
-    CircleSegment(angle: 90, radialMenuSize: 100, imageName: "square.and.arrow.up.fill",
+    CircleSegment(angle: 90, radialMenuSize: 100, icon: "square.and.arrow.up.fill",
                   color: .blue).frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: 100)
 }

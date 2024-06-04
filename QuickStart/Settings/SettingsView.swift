@@ -10,7 +10,7 @@ import Sparkle
 
 struct SettingsView: View {
     @State var currentSettingsTab = SettingsTab.general
-//    @StateObject private var updater = SoftwareUpdater()
+    @StateObject private var updater = SoftwareUpdater()
 //    private var appListManager = AppListManager()
 
     var body: some View {
@@ -23,13 +23,13 @@ struct SettingsView: View {
                 }
                 .frame(width: 450)
 
-//            RadialMenuSettingsView()
-//                .tag(SettingsTab.radialMenu)
-//                .tabItem {
-//                    Image(.loop)
-//                    Text("Radial Menu")
-//                }
-//                .frame(width: 450)
+            RadialMenuSettingsView()
+                .tag(SettingsTab.radialMenu)
+                .tabItem {
+                    Image(systemName: "gear")
+                    Text("Radial Menu")
+                }
+                .frame(width: 450)
 //
 //            PreviewSettingsView()
 //                .tag(SettingsTab.preview)
@@ -58,14 +58,14 @@ struct SettingsView: View {
 //                .frame(width: 450)
 //                .frame(maxHeight: 680)
 //
-//            MoreSettingsView()
-//                .tag(SettingsTab.more)
-//                .tabItem {
-//                    Image(systemName: "ellipsis.circle")
-//                    Text("More")
-//                }
-//                .environmentObject(updater)
-//                .frame(width: 450)
+            MoreSettingsView()
+                .tag(SettingsTab.more)
+                .tabItem {
+                    Image(systemName: "ellipsis.circle")
+                    Text("More")
+                }
+                .environmentObject(updater)
+                .frame(width: 450)
         }
         .fixedSize(horizontal: true, vertical: true)
     }

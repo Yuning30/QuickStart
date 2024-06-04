@@ -6,13 +6,15 @@
 //
 
 import SwiftUI
+import Defaults
 
 struct DirectionSelectorCircleSegment: Shape {
     var angle: Double = .zero
     let radialMenuSize: CGFloat
-    let numParts: Int = 8
+    @Default(.fourParts) var fourParts
     
     func angleOffset() -> Double {
+        let numParts: Double = if fourParts { 4 } else { 8 }
         return 360 / 2 / Double(numParts)
     }
 
