@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		3E6165802C0D502400C1F048 /* ActionEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E61657F2C0D502400C1F048 /* ActionEngine.swift */; };
+		3E9D68262C0E875100A6CDA4 /* CircleSegmentWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9D68252C0E875100A6CDA4 /* CircleSegmentWithImage.swift */; };
+		3E9D68282C0EB6BA00A6CDA4 /* CircleSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9D68272C0EB6BA00A6CDA4 /* CircleSegment.swift */; };
+		3E9D682A2C0EC8A800A6CDA4 /* Defaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9D68292C0EC8A800A6CDA4 /* Defaults+Extensions.swift */; };
+		3E9D682C2C0ECB7500A6CDA4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9D682B2C0ECB7500A6CDA4 /* SettingsView.swift */; };
+		3E9D682F2C0ECD1B00A6CDA4 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 3E9D682E2C0ECD1B00A6CDA4 /* Sparkle */; };
+		3E9D68312C0ECDB700A6CDA4 /* GeneralSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9D68302C0ECDB700A6CDA4 /* GeneralSettingsView.swift */; };
 		3EA6B5D22C0D0EEC0093F9C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA6B5D12C0D0EEC0093F9C2 /* AppDelegate.swift */; };
 		3EA6B5D42C0D0F450093F9C2 /* LoopManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA6B5D32C0D0F450093F9C2 /* LoopManager.swift */; };
 		3EA6B5D72C0D0F890093F9C2 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA6B5D62C0D0F890093F9C2 /* EventMonitor.swift */; };
@@ -25,7 +31,6 @@
 		3EF6A0262C09B74400BB4436 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 3EF6A0252C09B74400BB4436 /* Algorithms */; };
 		3EF6A0282C09B74400BB4436 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = 3EF6A0272C09B74400BB4436 /* Defaults */; };
 		3EF6A02A2C09B74400BB4436 /* SettingsAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 3EF6A0292C09B74400BB4436 /* SettingsAccess */; };
-		3EF6A02B2C09B76200BB4436 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3833522C09800700561087 /* SettingsView.swift */; };
 		3EF6A02C2C09B76600BB4436 /* RadialMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3833552C09A2C600561087 /* RadialMenuView.swift */; };
 		3EF6A02D2C09B76900BB4436 /* DirectionSelectorCirCleSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3833582C09A35000561087 /* DirectionSelectorCirCleSegment.swift */; };
 		3EF6A02E2C09B76B00BB4436 /* DirectionSelectorSquareSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E38335A2C09A37F00561087 /* DirectionSelectorSquareSegment.swift */; };
@@ -38,13 +43,17 @@
 		3E3833472C097D5700561087 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E38334A2C097D5700561087 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3E38334C2C097D5700561087 /* QuickStart.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QuickStart.entitlements; sourceTree = "<group>"; };
-		3E3833522C09800700561087 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		3E3833552C09A2C600561087 /* RadialMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialMenuView.swift; sourceTree = "<group>"; };
 		3E3833582C09A35000561087 /* DirectionSelectorCirCleSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionSelectorCirCleSegment.swift; sourceTree = "<group>"; };
 		3E38335A2C09A37F00561087 /* DirectionSelectorSquareSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionSelectorSquareSegment.swift; sourceTree = "<group>"; };
 		3E38335F2C09A68400561087 /* Angle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Angle+Extensions.swift"; sourceTree = "<group>"; };
 		3E38336D2C09AFC700561087 /* QuickStart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickStart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E61657F2C0D502400C1F048 /* ActionEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionEngine.swift; sourceTree = "<group>"; };
+		3E9D68252C0E875100A6CDA4 /* CircleSegmentWithImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleSegmentWithImage.swift; sourceTree = "<group>"; };
+		3E9D68272C0EB6BA00A6CDA4 /* CircleSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleSegment.swift; sourceTree = "<group>"; };
+		3E9D68292C0EC8A800A6CDA4 /* Defaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Defaults+Extensions.swift"; sourceTree = "<group>"; };
+		3E9D682B2C0ECB7500A6CDA4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		3E9D68302C0ECDB700A6CDA4 /* GeneralSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSettingsView.swift; sourceTree = "<group>"; };
 		3EA6B5D12C0D0EEC0093F9C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EA6B5D32C0D0F450093F9C2 /* LoopManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopManager.swift; sourceTree = "<group>"; };
 		3EA6B5D62C0D0F890093F9C2 /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
@@ -66,6 +75,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EF6A02A2C09B74400BB4436 /* SettingsAccess in Frameworks */,
+				3E9D682F2C0ECD1B00A6CDA4 /* Sparkle in Frameworks */,
 				3EF6A0282C09B74400BB4436 /* Defaults in Frameworks */,
 				3EF6A0262C09B74400BB4436 /* Algorithms in Frameworks */,
 			);
@@ -120,7 +130,8 @@
 		3E3833542C09807D00561087 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				3E3833522C09800700561087 /* SettingsView.swift */,
+				3E9D682B2C0ECB7500A6CDA4 /* SettingsView.swift */,
+				3E9D68302C0ECDB700A6CDA4 /* GeneralSettingsView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -131,6 +142,8 @@
 				3E3833552C09A2C600561087 /* RadialMenuView.swift */,
 				3EA6B5DB2C0D10A30093F9C2 /* RadialMenuController.swift */,
 				3E3833582C09A35000561087 /* DirectionSelectorCirCleSegment.swift */,
+				3E9D68252C0E875100A6CDA4 /* CircleSegmentWithImage.swift */,
+				3E9D68272C0EB6BA00A6CDA4 /* CircleSegment.swift */,
 				3E38335A2C09A37F00561087 /* DirectionSelectorSquareSegment.swift */,
 			);
 			path = RadialMenu;
@@ -173,6 +186,7 @@
 				3EA6B5E52C0D1DDA0093F9C2 /* CGKeyCode+Extensions.swift */,
 				3EA6B5EB2C0D1F680093F9C2 /* Bundle+Extensions.swift */,
 				3EA6B5E72C0D1E420093F9C2 /* NSEvent+Extensions.swift */,
+				3E9D68292C0EC8A800A6CDA4 /* Defaults+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -204,6 +218,7 @@
 				3EF6A0252C09B74400BB4436 /* Algorithms */,
 				3EF6A0272C09B74400BB4436 /* Defaults */,
 				3EF6A0292C09B74400BB4436 /* SettingsAccess */,
+				3E9D682E2C0ECD1B00A6CDA4 /* Sparkle */,
 			);
 			productName = QuickStart;
 			productReference = 3E38336D2C09AFC700561087 /* QuickStart.app */;
@@ -238,6 +253,7 @@
 				3E3833622C09A82900561087 /* XCRemoteSwiftPackageReference "Defaults" */,
 				3E3833652C09AAB400561087 /* XCRemoteSwiftPackageReference "SettingsAccess" */,
 				3E61657E2C0D4E4B00C1F048 /* XCRemoteSwiftPackageReference "SwiftLint" */,
+				3E9D682D2C0ECD1B00A6CDA4 /* XCRemoteSwiftPackageReference "Sparkle" */,
 			);
 			productRefGroup = 3E3833412C097D5500561087 /* Products */;
 			projectDirPath = "";
@@ -265,6 +281,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EA6B5EA2C0D1F310093F9C2 /* PermissionManager.swift in Sources */,
+				3E9D68312C0ECDB700A6CDA4 /* GeneralSettingsView.swift in Sources */,
+				3E9D68282C0EB6BA00A6CDA4 /* CircleSegment.swift in Sources */,
+				3E9D682C2C0ECB7500A6CDA4 /* SettingsView.swift in Sources */,
 				3EF6A02C2C09B76600BB4436 /* RadialMenuView.swift in Sources */,
 				3EA6B5E82C0D1E420093F9C2 /* NSEvent+Extensions.swift in Sources */,
 				3EA6B5EC2C0D1F680093F9C2 /* Bundle+Extensions.swift in Sources */,
@@ -272,7 +291,9 @@
 				3EA6B5DC2C0D10A30093F9C2 /* RadialMenuController.swift in Sources */,
 				3EA6B5DE2C0D11BD0093F9C2 /* ActionDirection.swift in Sources */,
 				3EA6B5E12C0D17030093F9C2 /* CGGeometry+Extensions.swift in Sources */,
+				3E9D682A2C0EC8A800A6CDA4 /* Defaults+Extensions.swift in Sources */,
 				3EF6A02F2C09B77000BB4436 /* Angle+Extensions.swift in Sources */,
+				3E9D68262C0E875100A6CDA4 /* CircleSegmentWithImage.swift in Sources */,
 				3E6165802C0D502400C1F048 /* ActionEngine.swift in Sources */,
 				3EA6B5DA2C0D10330093F9C2 /* KeybindMonitor.swift in Sources */,
 				3EF6A0232C09B71200BB4436 /* QuickStartApp.swift in Sources */,
@@ -282,7 +303,6 @@
 				3EA6B5E42C0D1D0D0093F9C2 /* Notification+Extensions.swift in Sources */,
 				3EA6B5E62C0D1DDA0093F9C2 /* CGKeyCode+Extensions.swift in Sources */,
 				3EA6B5D72C0D0F890093F9C2 /* EventMonitor.swift in Sources */,
-				3EF6A02B2C09B76200BB4436 /* SettingsView.swift in Sources */,
 				3EF6A02E2C09B76B00BB4436 /* DirectionSelectorSquareSegment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,9 +540,22 @@
 				minimumVersion = 0.55.1;
 			};
 		};
+		3E9D682D2C0ECD1B00A6CDA4 /* XCRemoteSwiftPackageReference "Sparkle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sparkle-project/Sparkle";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.6.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3E9D682E2C0ECD1B00A6CDA4 /* Sparkle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3E9D682D2C0ECD1B00A6CDA4 /* XCRemoteSwiftPackageReference "Sparkle" */;
+			productName = Sparkle;
+		};
 		3EF6A0252C09B74400BB4436 /* Algorithms */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3E38335C2C09A5B200561087 /* XCRemoteSwiftPackageReference "swift-algorithms" */;

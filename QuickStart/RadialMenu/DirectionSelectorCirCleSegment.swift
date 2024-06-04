@@ -10,6 +10,11 @@ import SwiftUI
 struct DirectionSelectorCircleSegment: Shape {
     var angle: Double = .zero
     let radialMenuSize: CGFloat
+    let numParts: Int = 8
+    
+    func angleOffset() -> Double {
+        return 360 / 2 / Double(numParts)
+    }
 
     var animatableData: Double {
         get { self.angle }
@@ -30,10 +35,16 @@ struct DirectionSelectorCircleSegment: Shape {
                 x: radialMenuSize/2,
                 y: radialMenuSize/2
             ),
-            radius: radialMenuSize,
-            startAngle: .degrees(angle - 22.5),
-            endAngle: .degrees(angle + 22.5),
+            radius: radialMenuSize/2,
+            startAngle: .degrees(angle - angleOffset()),
+            endAngle: .degrees(angle + angleOffset()),
             clockwise: false
+        )
+        path.addLine(
+            to: CGPoint(
+                x: radialMenuSize/2,
+                y: radialMenuSize/2
+            )
         )
 
         return path

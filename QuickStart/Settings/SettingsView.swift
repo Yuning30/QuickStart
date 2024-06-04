@@ -1,49 +1,81 @@
 //
 //  SettingsView.swift
-//  QuickStart
+//  Loop
 //
-//  Created by Yuning Wang on 5/30/24.
+//  Created by Kai Azim on 2023-11-30.
 //
 
 import SwiftUI
+import Sparkle
 
 struct SettingsView: View {
+    @State var currentSettingsTab = SettingsTab.general
+//    @StateObject private var updater = SoftwareUpdater()
+//    private var appListManager = AppListManager()
+
     var body: some View {
-        VStack {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            Button {
-                ActionEngine.HIDPostAuxKey(key: 16)
-            } label: {
-                Text("change")
-            }
-            Text("abc")
-            RadialMenuView()
-        }
-    }
-}
+        TabView(selection: $currentSettingsTab) {
+            GeneralSettingsView()
+                .tag(SettingsTab.general)
+                .tabItem {
+                    Image(systemName: "gear")
+                    Text("General")
+                }
+                .frame(width: 450)
 
-//func HIDPostAuxKey(key: UInt32) {
-//    func doKey(down: Bool) {
-//        let flags = NSEvent.ModifierFlags(rawValue: (down ? 0xa00 : 0xb00))
-//        let data1 = Int((key<<16) | (down ? 0xa00 : 0xb00))
+//            RadialMenuSettingsView()
+//                .tag(SettingsTab.radialMenu)
+//                .tabItem {
+//                    Image(.loop)
+//                    Text("Radial Menu")
+//                }
+//                .frame(width: 450)
 //
-//        let ev = NSEvent.otherEvent(with: NSEvent.EventType.systemDefined,
-//                                    location: NSPoint(x:0,y:0),
-//                                    modifierFlags: flags,
-//                                    timestamp: 0,
-//                                    windowNumber: 0,
-//                                    context: nil,
-//                                    subtype: 8,
-//                                    data1: data1,
-//                                    data2: -1
-//                                    )
-//        let cev = ev?.cgEvent
-//        cev?.post(tap: CGEventTapLocation.cghidEventTap)
-//    }
-//    doKey(down: true)
-//    doKey(down: false)
-//}
+//            PreviewSettingsView()
+//                .tag(SettingsTab.preview)
+//                .tabItem {
+//                    Image(systemName: "rectangle.portrait.and.arrow.right")
+//                    Text("Preview")
+//                }
+//                .frame(width: 450)
+//
+//            KeybindingsSettingsView()
+//                .tag(SettingsTab.keybindings)
+//                .tabItem {
+//                    Image(systemName: "keyboard")
+//                    Text("Keybindings")
+//                }
+//                .frame(width: 500)
+//                .frame(minHeight: 500, maxHeight: 680)
+//
+//            ExcludeListSettingsView()
+//                .tag(SettingsTab.excludedApps)
+//                .tabItem {
+//                    Image(systemName: "xmark.app")
+//                    Text("Excluded Apps")
+//                }
+//                .environmentObject(appListManager)
+//                .frame(width: 450)
+//                .frame(maxHeight: 680)
+//
+//            MoreSettingsView()
+//                .tag(SettingsTab.more)
+//                .tabItem {
+//                    Image(systemName: "ellipsis.circle")
+//                    Text("More")
+//                }
+//                .environmentObject(updater)
+//                .frame(width: 450)
+        }
+        .fixedSize(horizontal: true, vertical: true)
+    }
 
-#Preview {
-    SettingsView()
+    enum SettingsTab: Int {
+        case general
+        case radialMenu
+        case preview
+        case keybindings
+        case excludedApps
+        case more
+    }
 }
