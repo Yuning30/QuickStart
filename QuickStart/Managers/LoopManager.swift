@@ -159,6 +159,9 @@ class LoopManager: ObservableObject {
         if newAction != currentAction {
             currentAction = newAction
 
+            if Defaults[.hideUntilDirectionIsChosen] {
+                openWindows()
+            }
             DispatchQueue.main.async {
                 Notification.Name.updateUIDirection.post(userInfo: ["action": self.currentAction])
             }
@@ -267,9 +270,14 @@ class LoopManager: ObservableObject {
 
         initialMousePosition = NSEvent.mouseLocation
 
-        mouseMovedEventMonitor!.start()
+        if !Defaults[.disableCursorInteraction] {
+            mouseMovedEventMonitor!.start()
+        }
 
-        openWindows()
+        if !Defaults[.hideUntilDirectionIsChosen] {
+            openWindows()
+        }
+
 
         keybindMonitor.start()
 

@@ -10,7 +10,6 @@ import Defaults
 import SymbolPicker
 
 struct RadialMenuSettingsView: View {
-    @Default(.radialMenuVisibility) var radialMenuVisibility
     @Default(.radialMenuCornerRadius) var radialMenuCornerRadius
     @Default(.radialMenuThickness) var radialMenuThickness
     @Default(.disableCursorInteraction) var disableCursorInteraction
@@ -25,13 +24,9 @@ struct RadialMenuSettingsView: View {
     var body: some View {
         Form {
             Section("Appearance") {
-                Toggle("Show radial menu when looping", isOn: $radialMenuVisibility)
+                Toggle("Using 4 directions", isOn: $fourParts)
 
                 Toggle("Disable cursor interaction", isOn: $disableCursorInteraction)
-                    .disabled(!radialMenuVisibility)
-                    .foregroundColor(!radialMenuVisibility ? .secondary : nil)
-                
-                Toggle("Using 4 directions", isOn: $fourParts)
             }
 
             Section("Preview") {
@@ -42,7 +37,6 @@ struct RadialMenuSettingsView: View {
                     CircleSegmentWithImage()
                 }
             }
-            .opacity(radialMenuVisibility ? 1 : 0.5)
 
             Section("Action Configuration") {
                 Picker("Action Direction", selection: $actionDirection) {
@@ -77,8 +71,6 @@ struct RadialMenuSettingsView: View {
                 }
 
             }
-            .disabled(!radialMenuVisibility)
-            .foregroundColor(!radialMenuVisibility ? .secondary : nil)
         }
         .formStyle(.grouped)
         .scrollDisabled(true)
