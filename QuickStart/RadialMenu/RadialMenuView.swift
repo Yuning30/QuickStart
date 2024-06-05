@@ -88,7 +88,7 @@ struct RadialMenuView: View {
                 print("New radial menu window action received: \(action)")
             }
         }
-        .onChange(of: self.currentAction) { _ in
+        .onChange(of: self.currentAction) {
             switch self.currentAction {
             case .noAction:
                 self.angle = 0

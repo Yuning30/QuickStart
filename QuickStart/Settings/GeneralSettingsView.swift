@@ -37,7 +37,7 @@ struct GeneralSettingsView: View {
         Form {
             Section("Behavior") {
                 Toggle("Launch at login", isOn: $launchAtLogin)
-                    .onChange(of: launchAtLogin) { _ in
+                    .onChange(of: launchAtLogin) {
                         if launchAtLogin {
                             try? SMAppService().register()
                         } else {

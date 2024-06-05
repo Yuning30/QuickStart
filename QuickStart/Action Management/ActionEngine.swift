@@ -11,7 +11,7 @@ import Defaults
 
 class ActionEngine {
     static func executeAction(direction: ActionDirection) {
-        var action = direction.toAction(fourParts: Defaults[.fourParts])
+        let action = direction.toAction(fourParts: Defaults[.fourParts])
         
         switch action.actionType {
         case .builtin:

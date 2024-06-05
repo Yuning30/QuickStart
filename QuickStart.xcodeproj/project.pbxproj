@@ -7,11 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E6020E02C10F3680004FB2E /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6020DF2C10F3680004FB2E /* Color+Extensions.swift */; };
 		3E6165802C0D502400C1F048 /* ActionEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E61657F2C0D502400C1F048 /* ActionEngine.swift */; };
 		3E76B25A2C0F6E7700794406 /* RadialMenuSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76B2592C0F6E7700794406 /* RadialMenuSettingsView.swift */; };
 		3E76B25C2C0FCBA900794406 /* ActionConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76B25B2C0FCBA900794406 /* ActionConfigurationView.swift */; };
 		3E76B25F2C0FD4F400794406 /* SFSymbolsPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 3E76B25E2C0FD4F400794406 /* SFSymbolsPicker */; };
 		3E76B2622C0FD84C00794406 /* SymbolPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 3E76B2612C0FD84C00794406 /* SymbolPicker */; };
+		3E76B2642C1028EE00794406 /* KeybindingsSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76B2632C1028EE00794406 /* KeybindingsSettingsView.swift */; };
+		3E76B2662C102AE600794406 /* CrispValueAdjuster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76B2652C102AE600794406 /* CrispValueAdjuster.swift */; };
+		3E76B2682C102B6600794406 /* TriggerKeycorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76B2672C102B6600794406 /* TriggerKeycorder.swift */; };
+		3E76B26A2C102B9200794406 /* KeycorderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76B2692C102B9200794406 /* KeycorderModel.swift */; };
+		3E76B26C2C102BCB00794406 /* ShakeEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76B26B2C102BCB00794406 /* ShakeEffect.swift */; };
 		3E9D68262C0E875100A6CDA4 /* CircleSegmentWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9D68252C0E875100A6CDA4 /* CircleSegmentWithImage.swift */; };
 		3E9D68282C0EB6BA00A6CDA4 /* CircleSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9D68272C0EB6BA00A6CDA4 /* CircleSegment.swift */; };
 		3E9D682A2C0EC8A800A6CDA4 /* Defaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9D68292C0EC8A800A6CDA4 /* Defaults+Extensions.swift */; };
@@ -54,9 +60,15 @@
 		3E38335A2C09A37F00561087 /* DirectionSelectorSquareSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionSelectorSquareSegment.swift; sourceTree = "<group>"; };
 		3E38335F2C09A68400561087 /* Angle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Angle+Extensions.swift"; sourceTree = "<group>"; };
 		3E38336D2C09AFC700561087 /* QuickStart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickStart.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E6020DF2C10F3680004FB2E /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		3E61657F2C0D502400C1F048 /* ActionEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionEngine.swift; sourceTree = "<group>"; };
 		3E76B2592C0F6E7700794406 /* RadialMenuSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialMenuSettingsView.swift; sourceTree = "<group>"; };
 		3E76B25B2C0FCBA900794406 /* ActionConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionConfigurationView.swift; sourceTree = "<group>"; };
+		3E76B2632C1028EE00794406 /* KeybindingsSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeybindingsSettingsView.swift; sourceTree = "<group>"; };
+		3E76B2652C102AE600794406 /* CrispValueAdjuster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrispValueAdjuster.swift; sourceTree = "<group>"; };
+		3E76B2672C102B6600794406 /* TriggerKeycorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggerKeycorder.swift; sourceTree = "<group>"; };
+		3E76B2692C102B9200794406 /* KeycorderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeycorderModel.swift; sourceTree = "<group>"; };
+		3E76B26B2C102BCB00794406 /* ShakeEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeEffect.swift; sourceTree = "<group>"; };
 		3E9D68252C0E875100A6CDA4 /* CircleSegmentWithImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleSegmentWithImage.swift; sourceTree = "<group>"; };
 		3E9D68272C0EB6BA00A6CDA4 /* CircleSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleSegment.swift; sourceTree = "<group>"; };
 		3E9D68292C0EC8A800A6CDA4 /* Defaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Defaults+Extensions.swift"; sourceTree = "<group>"; };
@@ -147,6 +159,9 @@
 				3E9D68322C0ED88A00A6CDA4 /* MoreSettingsView.swift */,
 				3E76B2592C0F6E7700794406 /* RadialMenuSettingsView.swift */,
 				3E76B25B2C0FCBA900794406 /* ActionConfigurationView.swift */,
+				3E76B2632C1028EE00794406 /* KeybindingsSettingsView.swift */,
+				3E76B2672C102B6600794406 /* TriggerKeycorder.swift */,
+				3E76B2692C102B9200794406 /* KeycorderModel.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -178,6 +193,8 @@
 			isa = PBXGroup;
 			children = (
 				3EA6B5D62C0D0F890093F9C2 /* EventMonitor.swift */,
+				3E76B2652C102AE600794406 /* CrispValueAdjuster.swift */,
+				3E76B26B2C102BCB00794406 /* ShakeEffect.swift */,
 				3E9D68342C0ED8AF00A6CDA4 /* SoftwareUpdater.swift */,
 			);
 			path = Utilities;
@@ -203,6 +220,7 @@
 				3EA6B5EB2C0D1F680093F9C2 /* Bundle+Extensions.swift */,
 				3EA6B5E72C0D1E420093F9C2 /* NSEvent+Extensions.swift */,
 				3E9D68292C0EC8A800A6CDA4 /* Defaults+Extensions.swift */,
+				3E6020DF2C10F3680004FB2E /* Color+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -308,9 +326,13 @@
 				3E9D682C2C0ECB7500A6CDA4 /* SettingsView.swift in Sources */,
 				3E9D68332C0ED88A00A6CDA4 /* MoreSettingsView.swift in Sources */,
 				3EF6A02C2C09B76600BB4436 /* RadialMenuView.swift in Sources */,
+				3E76B26A2C102B9200794406 /* KeycorderModel.swift in Sources */,
+				3E76B2642C1028EE00794406 /* KeybindingsSettingsView.swift in Sources */,
 				3EA6B5E82C0D1E420093F9C2 /* NSEvent+Extensions.swift in Sources */,
 				3EA6B5EC2C0D1F680093F9C2 /* Bundle+Extensions.swift in Sources */,
 				3EA6B5D42C0D0F450093F9C2 /* LoopManager.swift in Sources */,
+				3E6020E02C10F3680004FB2E /* Color+Extensions.swift in Sources */,
+				3E76B2682C102B6600794406 /* TriggerKeycorder.swift in Sources */,
 				3EA6B5DC2C0D10A30093F9C2 /* RadialMenuController.swift in Sources */,
 				3EA6B5DE2C0D11BD0093F9C2 /* ActionDirection.swift in Sources */,
 				3EA6B5E12C0D17030093F9C2 /* CGGeometry+Extensions.swift in Sources */,
@@ -318,6 +340,7 @@
 				3EF6A02F2C09B77000BB4436 /* Angle+Extensions.swift in Sources */,
 				3E9D68262C0E875100A6CDA4 /* CircleSegmentWithImage.swift in Sources */,
 				3E6165802C0D502400C1F048 /* ActionEngine.swift in Sources */,
+				3E76B2662C102AE600794406 /* CrispValueAdjuster.swift in Sources */,
 				3EA6B5DA2C0D10330093F9C2 /* KeybindMonitor.swift in Sources */,
 				3EF6A0232C09B71200BB4436 /* QuickStartApp.swift in Sources */,
 				3E76B25A2C0F6E7700794406 /* RadialMenuSettingsView.swift in Sources */,
@@ -328,6 +351,7 @@
 				3EA6B5E62C0D1DDA0093F9C2 /* CGKeyCode+Extensions.swift in Sources */,
 				3EA6B5D72C0D0F890093F9C2 /* EventMonitor.swift in Sources */,
 				3EF6A02E2C09B76B00BB4436 /* DirectionSelectorSquareSegment.swift in Sources */,
+				3E76B26C2C102BCB00794406 /* ShakeEffect.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

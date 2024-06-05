@@ -33,7 +33,6 @@ class LoopManager: ObservableObject {
     private var angleToMouse: Angle = Angle(degrees: 0)
     private var distanceToMouse: CGFloat = 0
 
-    var triggerKey: Set<CGKeyCode> = [.kVK_Function]
     private var triggerDelayTimer: Timer? {
         willSet {
             triggerDelayTimer?.invalidate()
@@ -61,7 +60,11 @@ class LoopManager: ObservableObject {
         keyDownEventMonitor = NSEventMonitor(
             scope: .global,
             eventMask: .keyDown
-        ) { _ in return
+        ) { _ in 
+            if Defaults[.doubleClickToTrigger] &&
+                abs(self.lastTriggerKeyClick.timeIntervalSinceNow) < NSEvent.doubleClickInterval {
+                self.lastTriggerKeyClick = Date.distantPast
+            }
         }
 
         flagsChangedEventMonitor!.start()
@@ -142,7 +145,7 @@ class LoopManager: ObservableObject {
     }
 
     private func performHapticFeedback() {
-        if false {
+        if Defaults[.hapticFeedback] {
             NSHapticFeedbackManager.defaultPerformer.perform(
                 NSHapticFeedbackManager.FeedbackPattern.alignment,
                 performanceTime: NSHapticFeedbackManager.PerformanceTime.now
@@ -165,7 +168,7 @@ class LoopManager: ObservableObject {
     }
 
     func handleMiddleClick(cgEvent: CGEvent) -> Unmanaged<CGEvent>? {
-        if let event = NSEvent(cgEvent: cgEvent), event.buttonNumber == 2, false {
+        if let event = NSEvent(cgEvent: cgEvent), event.buttonNumber == 2, Defaults[.middleClickTriggersLoop] {
             if event.type == .otherMouseDragged && !isLoopActive {
                 openLoop()
             }
@@ -180,7 +183,7 @@ class LoopManager: ObservableObject {
     private func handleTriggerDelay() {
         if triggerDelayTimer == nil {
             triggerDelayTimer = Timer.scheduledTimer(
-                withTimeInterval: 0,
+                withTimeInterval: Double(Defaults[.triggerDelay]),
                 repeats: false
             ) { _ in
                 self.openLoop()
@@ -204,7 +207,7 @@ class LoopManager: ObservableObject {
         let previousModifiers = currentlyPressedModifiers
         processModifiers(event)
 
-        let triggerKey = self.triggerKey
+        let triggerKey = Defaults[.triggerKey]
         let wasKeyDown = event.type == .keyDown || currentlyPressedModifiers.count > previousModifiers.count
 
         if wasKeyDown, triggerKey.isSubset(of: currentlyPressedModifiers) {
@@ -217,11 +220,11 @@ class LoopManager: ObservableObject {
                 return
             }
 
-            let useTriggerDelay = false
-            let useDoubleClickTrigger = false
+            let useTriggerDelay = Defaults[.triggerDelay] > 0.1
+            let useDoubleClickTrigger = Defaults[.doubleClickToTrigger]
 
             if useDoubleClickTrigger {
-                guard currentlyPressedModifiers.sorted() == self.triggerKey.sorted() else { return }
+                guard currentlyPressedModifiers.sorted() == Defaults[.triggerKey].sorted() else { return }
                 handleDoubleClickToTrigger(useTriggerDelay)
             } else if useTriggerDelay {
                 handleTriggerDelay()
