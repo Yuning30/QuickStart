@@ -90,38 +90,54 @@ class LoopManager: ObservableObject {
         angleToMouse = mouseAngle
         distanceToMouse = mouseDistance
 
-        var resizeDirection: ActionDirection = .noAction
+        var newDirection: ActionDirection = .noAction
 
         // If mouse over 50 points away, select half or quarter positions
-        if distanceToMouse > pow(50 - 22, 2) {
-            switch Int((angleToMouse.normalized().degrees + 22.5) / 45) {
-            case 0, 8:
-                resizeDirection = .right
-            case 1:
-                resizeDirection = .bottomRight
-            case 2:
-                resizeDirection = .bottom
-            case 3:
-                resizeDirection = .bottomLeft
-            case 4:
-                resizeDirection = .left
-            case 5:
-                resizeDirection = .topLeft
-            case 6:
-                resizeDirection = .top
-            case 7:
-                resizeDirection = .topRight
-            default:
-                resizeDirection = .noAction
+        if distanceToMouse > pow(50 - Defaults[.radialMenuThickness], 2) {
+            if Defaults[.fourParts] {
+                switch Int((angleToMouse.normalized().degrees + 45) / 90) {
+                case 0, 4:
+                    newDirection = .right
+                case 1:
+                    newDirection = .bottom
+                case 2:
+                    newDirection = .left
+                case 3:
+                    newDirection = .top
+                default:
+                    newDirection = .noAction
+                }
+            }
+            else {
+                switch Int((angleToMouse.normalized().degrees + 22.5) / 45) {
+                case 0, 8:
+                    newDirection = .right
+                case 1:
+                    newDirection = .bottomRight
+                case 2:
+                    newDirection = .bottom
+                case 3:
+                    newDirection = .bottomLeft
+                case 4:
+                    newDirection = .left
+                case 5:
+                    newDirection = .topLeft
+                case 6:
+                    newDirection = .top
+                case 7:
+                    newDirection = .topRight
+                default:
+                    newDirection = .noAction
+                }
             }
         } else if distanceToMouse < pow(noActionDistance, 2) {
-            resizeDirection = .noAction
+            newDirection = .noAction
         } else {
-            resizeDirection = .noAction
+            newDirection = .noAction
         }
 
-        if resizeDirection != currentAction {
-            changeAction(resizeDirection)
+        if newDirection != currentAction {
+            changeAction(newDirection)
         }
     }
 

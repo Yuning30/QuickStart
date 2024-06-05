@@ -59,7 +59,7 @@ struct RadialMenuSettingsView: View {
                     }
                 }
                 
-                let segIndex = actionDirection.to_index(fourParts: fourParts)
+                let segIndex = actionDirection.toIndex(fourParts: fourParts)
                 
                 if fourParts {
                     ActionTypePicker(actiontype: $fourSegments[segIndex].actionType)

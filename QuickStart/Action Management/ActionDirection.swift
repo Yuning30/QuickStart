@@ -25,7 +25,7 @@ enum ActionDirection: String, CaseIterable, Identifiable, Codable {
     case left = "left"
     case topLeft = "topLeft"
     
-    func to_index(fourParts: Bool) -> Int {
+    func toIndex(fourParts: Bool) -> Int {
         if fourParts {
             switch self {
             case .top:
@@ -66,5 +66,13 @@ enum ActionDirection: String, CaseIterable, Identifiable, Codable {
                 return -1
             }
         }
+    }
+    
+    func toAction(fourParts: Bool) -> SegmentDescription {
+        let actionIndex = self.toIndex(fourParts: fourParts)
+        if fourParts {
+            return Defaults[.fourSegments][actionIndex]
+        }
+        return Defaults[.eightActions][actionIndex]
     }
 }

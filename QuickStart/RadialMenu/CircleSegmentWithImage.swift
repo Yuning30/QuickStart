@@ -41,13 +41,12 @@ struct FourSegments: Codable, Defaults.Serializable {
 }
 
 struct CircleSegmentWithImage: View {
-    @State private var radialMenuSize: CGFloat = 200
-    @State private var radialMenuThickness: CGFloat = 22
-    @State private var color: Color = .blue
-//    @Default(.fourActions) var segments: [SegmentDescription]
+    private var radialMenuSize: CGFloat = 200
+    private var radialMenuThickness: CGFloat = Defaults[.radialMenuThickness]
+    private var color: Color = .blue
+
     var eightSegments = Defaults[.eightActions]
     var fourSegments = Defaults[.fourSegments]
-//    @State private var segments: [SegmentDescription] = [SegmentDescription(icon: "square.and.arrow.up.fill", angle: 0)]
     var fourParts = Defaults[.fourParts]
 
     var body: some View {

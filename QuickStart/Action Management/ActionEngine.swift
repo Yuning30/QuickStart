@@ -7,27 +7,33 @@
 
 import Foundation
 import SwiftUI
+import Defaults
 
 class ActionEngine {
     static func executeAction(direction: ActionDirection) {
-        switch direction {
-        case .bottom:
-            NextSong()
-        case .top:
-            StartPause()
+        var action = direction.toAction(fourParts: Defaults[.fourParts])
+        
+        switch action.actionType {
+        case .builtin:
+            executeBuiltinAction(action: action.builtinAction)
         default:
-            return
+            print("under construction")
         }
     }
     
-    static func NextSong() {
-        print("next song")
-        return
-    }
-    
-    static func StartPause() {
-        print("song start/psuse")
-        HIDPostAuxKey(key: 16)
+    static func executeBuiltinAction(action: BuiltinActions) {
+        switch action {
+        case .startPause:
+            print("start/pause")
+            HIDPostAuxKey(key: 16)
+        case .next:
+            print("next")
+            HIDPostAuxKey(key: 17)
+        case .previous:
+            print("previous")
+            HIDPostAuxKey(key: 18)
+
+        }
     }
     
     static func HIDPostAuxKey(key: UInt32) {
