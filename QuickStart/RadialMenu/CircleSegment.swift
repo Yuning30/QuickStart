@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct CircleSegment: View {
-    let angle: Double
-    let radialMenuSize: CGFloat
-    let icon: String
-    let color: Color
+    var angle: Double
+    var radialMenuSize: CGFloat
+    var icon: String
+    var color: Color
+    var fourParts: Bool
     
     var body: some View {
-        DirectionSelectorCircleSegment(angle: .zero, radialMenuSize: radialMenuSize)
+        DirectionSelectorCircleSegment(angle: .zero, radialMenuSize: radialMenuSize, fourParts: fourParts)
             .stroke(Color.black, lineWidth: 1)
             .fill(color)
             .overlay {
@@ -27,6 +28,19 @@ struct CircleSegment: View {
 }
 
 #Preview {
-    CircleSegment(angle: 90, radialMenuSize: 100, icon: "square.and.arrow.up.fill",
-                  color: .blue).frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: 100)
+    struct Preview: View {
+        @State private var angle: Double = 90
+        @State private var radialMenuSize: CGFloat = 100
+        @State private var icon: String = "square.and.arrow.up.fill"
+        @State private var color: Color = .blue
+        @State private var fourParts: Bool = true
+        
+        var body: some View {
+            CircleSegment(angle: angle, radialMenuSize: radialMenuSize, icon: icon, color: color, fourParts: fourParts)
+            .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: 100)
+        }
+    }
+
+    return Preview()
+    
 }

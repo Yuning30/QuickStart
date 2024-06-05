@@ -6,6 +6,52 @@
 //
 
 import SwiftUI
+import Defaults
+import SymbolPicker
+
+struct ActionTypePicker: View {
+    @Binding var actiontype: ActionType
+    
+    var body: some View {
+        Picker("Action Type", selection: $actiontype) {
+            ForEach(ActionType.allCases) {
+                atype in Text(atype.rawValue)
+            }
+        }
+    }
+}
+
+struct ActionDetailPicker: View {
+    @Binding var icon: String
+    @Binding var builtinAction: BuiltinActions
+    @State private var isPresented = false
+    var actionType: ActionType
+    
+    var body: some View {
+        switch actionType {
+        case .builtin:
+            Picker("Builtin Actions", selection: $builtinAction) {
+                ForEach(BuiltinActions.allCases) {
+                    action in Text(action.rawValue)
+                }
+            }
+            
+        default:
+            Text("under construction")
+        }
+        
+        HStack {
+            Text("Select a symbol")
+            Spacer()
+            Image(systemName: icon).sheet(isPresented: $isPresented, content: {
+                SymbolPicker(symbol: $icon)
+            })
+            Button("Select a symbol") {
+                isPresented.toggle()
+            }
+        }
+    }
+}
 
 struct ActionConfigurationView: View {
     @Binding var fourParts: Bool

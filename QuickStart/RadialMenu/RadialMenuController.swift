@@ -35,7 +35,7 @@ class RadialMenuController {
         panel.backgroundColor = NSColor.white.withAlphaComponent(0.00001)
         panel.level = .screenSaver
         panel.contentView = NSHostingView(
-            rootView: RadialMenuView()
+            rootView: CircleSegmentWithImage()
         )
         panel.alphaValue = 0
         panel.setFrame(

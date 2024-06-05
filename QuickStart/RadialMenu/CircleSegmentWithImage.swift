@@ -8,7 +8,7 @@
 import SwiftUI
 import Defaults
 
-enum ActionType: String, Codable, CaseIterable, Identifiable {
+enum ActionType: String, Codable, CaseIterable, Identifiable, Defaults.Serializable {
     var id: Self { self }
     
     case builtin = "Builtin"
@@ -17,7 +17,7 @@ enum ActionType: String, Codable, CaseIterable, Identifiable {
     case appleScript = "Run AppleScript"
 }
 
-enum BuiltinActions: String, Identifiable, CaseIterable, Codable {
+enum BuiltinActions: String, Identifiable, CaseIterable, Codable, Defaults.Serializable {
     var id: Self { self }
     
     case startPause = "Start/Pause"
@@ -33,10 +33,22 @@ struct SegmentDescription: Codable, Identifiable, Hashable, Equatable, Defaults.
     var id = UUID()
 }
 
+struct FourSegments: Codable, Defaults.Serializable {
+    var topSegment: SegmentDescription
+    var leftSegment: SegmentDescription
+    var rightSegment: SegmentDescription
+    var bottomSegment: SegmentDescription
+}
+
 struct CircleSegmentWithImage: View {
-    let radialMenuSize: CGFloat = 200
-    let radialMenuThickness: CGFloat = 22
-    let segments: [SegmentDescription]
+    @State private var radialMenuSize: CGFloat = 200
+    @State private var radialMenuThickness: CGFloat = 22
+    @State private var color: Color = .blue
+//    @Default(.fourActions) var segments: [SegmentDescription]
+    var eightSegments = Defaults[.eightActions]
+    var fourSegments = Defaults[.fourSegments]
+//    @State private var segments: [SegmentDescription] = [SegmentDescription(icon: "square.and.arrow.up.fill", angle: 0)]
+    var fourParts = Defaults[.fourParts]
 
     var body: some View {
         VStack {
@@ -45,9 +57,17 @@ struct CircleSegmentWithImage: View {
                 Spacer()
                 ZStack {
                     ZStack {
-                        ForEach(segments) { seg in
-                            CircleSegment(angle: seg.angle, radialMenuSize: radialMenuSize, icon: seg.icon, color: .blue)
+                        if fourParts {
+                            ForEach(Defaults[.fourSegments]) { seg in
+                                CircleSegment(angle: seg.angle, radialMenuSize: radialMenuSize, icon: seg.icon, color: color, fourParts: fourParts)
+                            }
                         }
+                        else {
+                            ForEach(eightSegments) { seg in
+                                CircleSegment(angle: seg.angle, radialMenuSize: radialMenuSize, icon: seg.icon, color: color, fourParts: fourParts)
+                            }
+                        }
+
 
                         Circle()
                             .stroke(.quinary, lineWidth: 2)
@@ -70,7 +90,15 @@ struct CircleSegmentWithImage: View {
 }
 
 #Preview {
-    CircleSegmentWithImage(segments: [SegmentDescription(icon: "square.and.arrow.up.fill", angle: 0), SegmentDescription(icon: "playpause.circle", angle: 45), SegmentDescription(icon: "circle.square", angle: 90)])
+    struct Preview: View {
+        var body: some View {
+            CircleSegmentWithImage()
+        }
+    }
+
+    return Preview()
+    
+    
 }
 
 #Preview {

@@ -10,9 +10,22 @@ import Defaults
 
 // Add variables for default values (which are stored even then the app is closed)
 extension Defaults.Keys {
-    static let fourParts = Key<Bool>("fourParts", default: false)
-    static let eightActions = Key<[SegmentDescription]>("eightActions", default: [SegmentDescription(icon: "square.and.arrow.up.fill", angle: 0)])
-    static let fourActions = Key<[SegmentDescription]>("fourActions", default: [SegmentDescription(icon: "square.and.arrow.up.fill", angle: 0), SegmentDescription(icon: "playpause.circle", angle: 90), SegmentDescription(icon: "circle.square", angle: 180), SegmentDescription(icon: "circle.square", angle: 270)])
+
+    static let fourParts = Key<Bool>("fourParts", default: true)
+    
+    static let fourSegments = Key<[SegmentDescription]>("fourSegments", default: [.init(icon: "square.and.arrow.up.fill", angle: 90),
+                                                                                  .init(icon: "square.and.arrow.up.fill", angle: 0),
+                                                                                  .init(icon: "square.and.arrow.up.fill", angle: 270),
+                                                                                  .init(icon: "square.and.arrow.up.fill", angle: 180)])
+    
+    static let eightActions = Key<[SegmentDescription]>("eightActions", default: [.init(icon: "square.and.arrow.up.fill", angle: 90),
+                                                                                  .init(icon: "square.and.arrow.up.fill", angle: 45),
+                                                                                  .init(icon: "square.and.arrow.up.fill", angle: 0),
+                                                                                  .init(icon: "square.and.arrow.up.fill", angle: 315),
+                                                                                  .init(icon: "square.and.arrow.up.fill", angle: 270),
+                                                                                  .init(icon: "square.and.arrow.up.fill", angle: 225),
+                                                                                  .init(icon: "square.and.arrow.up.fill", angle: 180),
+                                                                                  .init(icon: "square.and.arrow.up.fill", angle: 135)])
     
     static let hapticFeedback = Defaults.Key<Bool>("hapticFeedback", default: true)
     static let launchAtLogin = Key<Bool>("launchAtLogin", default: false)

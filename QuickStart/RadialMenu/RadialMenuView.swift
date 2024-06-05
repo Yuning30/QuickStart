@@ -11,13 +11,14 @@ import Defaults
 import UserNotifications
 
 struct RadialMenuView: View {
-    let radialMenuSize: CGFloat = 100
+    @State private var radialMenuSize: CGFloat = 100
     var radialMenuCornerRadius: CGFloat = 50
     var radialMenuThickness: CGFloat = 22
     var previewMode = false
     @State var angle: Double = .zero
     @State var currentAction: ActionDirection = .noAction
     @State var previousAction: ActionDirection?
+    @State private var fourParts: Bool
 
     var body: some View {
         VStack {
@@ -37,8 +38,9 @@ struct RadialMenuView: View {
                                         ZStack {
                                             ZStack {
                                                     DirectionSelectorCircleSegment(
-                                                        angle: self.angle,
-                                                        radialMenuSize: self.radialMenuSize
+                                                        angle: angle,
+                                                        radialMenuSize: radialMenuSize,
+                                                        fourParts: fourParts
                                                     )
                                             }
                                             .compositingGroup()
