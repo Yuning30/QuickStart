@@ -43,8 +43,8 @@ extension Defaults.Keys {
 
     static let useSystemAccentColor = Key<Bool>("useSystemAccentColor", default: true)
     static let customAccentColor = Key<Color>("customAccentColor", default: Color(.white))
-    static let useGradient = Key<Bool>("useGradient", default: true)
-    static let gradientColor = Key<Color>("gradientColor", default: Color(.black))
+    static let useDefaultSelectionColor = Key<Bool>("useDefaultSelectionColor", default: true)
+    static let customSelectionColor = Key<Color>("customSelectionColor", default: Color(.black))
 
     static let radialMenuCornerRadius = Key<CGFloat>("radialMenuCornerRadius", default: 50)
     static let radialMenuThickness = Key<CGFloat>("radialMenuThickness", default: 22)

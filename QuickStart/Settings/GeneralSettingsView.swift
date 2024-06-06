@@ -16,8 +16,8 @@ struct GeneralSettingsView: View {
     @Default(.hideMenuBarIcon) var hideMenuBarIcon
     @Default(.useSystemAccentColor) var useSystemAccentColor
     @Default(.customAccentColor) var customAccentColor
-    @Default(.useGradient) var useGradient
-    @Default(.gradientColor) var gradientColor
+    @Default(.useDefaultSelectionColor) var useDefaultSelectionColor
+    @Default(.customSelectionColor) var customSelectionColor
     @Default(.currentIcon) var currentIcon
     @Default(.notificationWhenIconUnlocked) var notificationWhenIconUnlocked
     @Default(.timesLooped) var timesLooped
@@ -64,13 +64,10 @@ struct GeneralSettingsView: View {
                     ColorPicker("Custom accent color", selection: $customAccentColor, supportsOpacity: false)
                 }
 
-                Toggle("Use gradient", isOn: $useGradient)
+                Toggle("Use default selection color", isOn: $useDefaultSelectionColor)
 
-                if !useSystemAccentColor && useGradient {
-                    ColorPicker("Custom gradient color", selection: $gradientColor, supportsOpacity: false)
-                        .foregroundColor(
-                            useGradient ? (useSystemAccentColor ? .secondary : nil) : .secondary
-                        )
+                if !useDefaultSelectionColor {
+                    ColorPicker("Custom selection color", selection: $customSelectionColor, supportsOpacity: false)
                 }
             }
         }

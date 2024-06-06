@@ -34,7 +34,12 @@ struct RadialMenuSettingsView: View {
 //                    VisualEffectView(material: .sidebar, blendingMode: .behindWindow)
 //                        .ignoresSafeArea()
 //                        .padding(-10)
-                    CircleSegmentWithImage()
+                    if fourParts {
+                        CircleSegmentWithImage()
+                    }
+                    else {
+                        CircleSegmentWithImage()
+                    }
                 }
             }
 

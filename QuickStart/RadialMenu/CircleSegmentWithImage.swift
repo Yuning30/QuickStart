@@ -33,21 +33,28 @@ struct SegmentDescription: Codable, Identifiable, Hashable, Equatable, Defaults.
     var id = UUID()
 }
 
-struct FourSegments: Codable, Defaults.Serializable {
-    var topSegment: SegmentDescription
-    var leftSegment: SegmentDescription
-    var rightSegment: SegmentDescription
-    var bottomSegment: SegmentDescription
-}
-
 struct CircleSegmentWithImage: View {
     private var radialMenuSize: CGFloat = 200
     private var radialMenuThickness: CGFloat = Defaults[.radialMenuThickness]
-    private var color: Color = .blue
-
-    var eightSegments = Defaults[.eightActions]
-    var fourSegments = Defaults[.fourSegments]
-    var fourParts = Defaults[.fourParts]
+    private var color: Color {
+        if Defaults[.useSystemAccentColor] {
+            Color.accentColor
+        }
+        else {
+            Defaults[.customAccentColor]
+        }
+    }
+    
+    private var selectionColor: Color {
+        if Defaults[.useDefaultSelectionColor] {
+            Color.secondary
+        }
+        else {
+            Defaults[.customSelectionColor]
+        }
+    }
+    
+    @State var currentDirection: ActionDirection = .noAction
 
     var body: some View {
         VStack {
@@ -56,18 +63,25 @@ struct CircleSegmentWithImage: View {
                 Spacer()
                 ZStack {
                     ZStack {
-                        if fourParts {
+                        if Defaults[.fourParts] {
                             ForEach(Defaults[.fourSegments]) { seg in
-                                CircleSegment(angle: seg.angle, radialMenuSize: radialMenuSize, icon: seg.icon, color: color, fourParts: fourParts)
+                                CircleSegment(angle: seg.angle, radialMenuSize: radialMenuSize, icon: seg.icon, color: color, fourParts: Defaults[.fourParts])
+                            }
+                            
+                            if currentDirection != .noAction {
+                                CircleSegment(angle: currentDirection.toAngle(fourParts: Defaults[.fourParts]), radialMenuSize: radialMenuSize, icon: Defaults[.fourSegments][currentDirection.toIndex(fourParts: Defaults[.fourParts])].icon, color: selectionColor, fourParts: Defaults[.fourParts])
                             }
                         }
                         else {
-                            ForEach(eightSegments) { seg in
-                                CircleSegment(angle: seg.angle, radialMenuSize: radialMenuSize, icon: seg.icon, color: color, fourParts: fourParts)
+                            ForEach(Defaults[.eightActions]) { seg in
+                                CircleSegment(angle: seg.angle, radialMenuSize: radialMenuSize, icon: seg.icon, color: color, fourParts: Defaults[.fourParts])
+                            }
+                            
+                            if currentDirection != .noAction {
+                                CircleSegment(angle: currentDirection.toAngle(fourParts: Defaults[.fourParts]), radialMenuSize: radialMenuSize, icon: Defaults[.eightActions][currentDirection.toIndex(fourParts: Defaults[.fourParts])].icon, color: selectionColor, fourParts: Defaults[.fourParts])
                             }
                         }
-
-
+                        
                         Circle()
                             .stroke(.quinary, lineWidth: 2)
 
@@ -84,6 +98,15 @@ struct CircleSegmentWithImage: View {
                 Spacer()
             }
             Spacer()
+        }
+        .shadow(radius: 10)
+        .onReceive(Notification.Name.updateUIDirection) {
+            obj in
+            if let action = obj.userInfo?["action"] as? ActionDirection {
+                self.currentDirection = action
+
+                print("New radial menu window action received: \(action)")
+            }
         }
     }
 }

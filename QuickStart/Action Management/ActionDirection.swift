@@ -75,4 +75,43 @@ enum ActionDirection: String, CaseIterable, Identifiable, Codable {
         }
         return Defaults[.eightActions][actionIndex]
     }
+    
+    func toAngle(fourParts: Bool) -> Double {
+        if fourParts {
+            switch self {
+            case .top:
+                return 90
+            case .right:
+                return 0
+            case .bottom:
+                return 270
+            case .left:
+                return 180
+            default:
+                return -1
+            }
+        }
+        else {
+            switch self {
+            case .top:
+                return 90
+            case .topRight:
+                return 45
+            case .right:
+                return 0
+            case .bottomRight:
+                return 315
+            case .bottom:
+                return 270
+            case .bottomLeft:
+                return 225
+            case .left:
+                return 180
+            case .topLeft:
+                return 135
+            default:
+                return -1
+            }
+        }
+    }
 }

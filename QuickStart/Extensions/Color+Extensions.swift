@@ -24,7 +24,7 @@ extension Color {
             if Defaults[.useSystemAccentColor] {
                 return Color(nsColor: NSColor.controlAccentColor.blended(withFraction: 0.5, of: .black)!)
             }
-            return Defaults[.gradientColor]
+            return Defaults[.customSelectionColor]
         }
     }
 }

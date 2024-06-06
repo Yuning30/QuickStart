@@ -154,7 +154,7 @@ class LoopManager: ObservableObject {
     }
 
     private func changeAction(_ action: ActionDirection) {
-        var newAction = action
+        let newAction = action
         
         if newAction != currentAction {
             currentAction = newAction
