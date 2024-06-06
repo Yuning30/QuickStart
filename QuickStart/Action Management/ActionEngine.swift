@@ -16,8 +16,67 @@ class ActionEngine {
         switch action.actionType {
         case .builtin:
             executeBuiltinAction(action: action.builtinAction)
+        case .shortcuts:
+            executeShortcutAction(action: action.shortcutKeys)
         default:
             print("under construction")
+        }
+    }
+    
+    static func executeShortcutAction(action: Set<CGKeyCode>) {
+        let src = CGEventSource(stateID: .hidSystemState)
+        var keyDownList: [CGEvent?] = []
+        var keyUpList: [CGEvent?] = []
+        
+        for keycode in action {
+            if !keycode.isModifier {
+                keyDownList.append(CGEvent(keyboardEventSource: src, virtualKey: keycode, keyDown: true))
+                keyUpList.append(CGEvent(keyboardEventSource: src, virtualKey: keycode, keyDown: false))
+            }
+        }
+        
+        var flags: [CGEventFlags] = []
+        for keycode in action {
+            if keycode.isModifier {
+                switch keycode {
+                case .kVK_Control, .kVK_RightControl:
+                    flags.append(.maskControl)
+                case .kVK_Command, .kVK_RightCommand:
+                    flags.append(.maskCommand)
+                case .kVK_Shift, .kVK_RightShift:
+                    flags.append(.maskShift)
+                case .kVK_Option, .kVK_RightOption:
+                    flags.append(.maskAlternate)
+                case .kVK_Function:
+                    flags.append(.maskSecondaryFn)
+                default:
+                    print("impossible modifier keycode", keycode)
+                }
+            }
+        }
+        
+        if flags.count > 0 {
+            var combinedFlags: CGEventFlags = flags[0]
+            for flag in flags {
+                combinedFlags = CGEventFlags(rawValue: flag.rawValue | combinedFlags.rawValue)
+            }
+            
+            for event in keyDownList {
+                event?.flags = combinedFlags
+            }
+            
+            for event in keyUpList {
+                event?.flags = combinedFlags
+            }
+        }
+        
+        let loc = CGEventTapLocation.cghidEventTap
+        for event in keyDownList {
+            event?.post(tap: loc)
+        }
+        
+        for event in keyUpList {
+            event?.post(tap: loc)
         }
     }
     

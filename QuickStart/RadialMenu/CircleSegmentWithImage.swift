@@ -37,49 +37,75 @@ struct SegmentDescription: Codable, Identifiable, Hashable, Equatable, Defaults.
 struct CircleSegmentWithImage: View {
     private var radialMenuSize: CGFloat = 200
     private var radialMenuThickness: CGFloat = Defaults[.radialMenuThickness]
-    private var color: Color {
-        if Defaults[.useSystemAccentColor] {
-            Color.accentColor
-        }
-        else {
-            Defaults[.customAccentColor]
-        }
-    }
     
-    private var selectionColor: Color {
-        if Defaults[.useDefaultSelectionColor] {
-            Color.secondary
-        }
-        else {
-            Defaults[.customSelectionColor]
-        }
-    }
+    @Default(.useSystemAccentColor) var useSystemAccentColor
+    @Default(.customAccentColor) var customAccentColor
+    @Default(.useDefaultSelectionColor) var useDefaultSelectionColor
+    @Default(.customSelectionColor) var customSelectionColor
+    @Default(.fourParts) var fourParts
+    @Default(.fourSegments) var fourSegments
+    @Default(.eightActions) var eightActions
+//    @State private var color: Color {
+//        if Defaults[.useSystemAccentColor] {
+//            Color.accentColor
+//        }
+//        else {
+//            Defaults[.customAccentColor]
+//        }
+//    }
+//    
+//    private var selectionColor: Color {
+//        if Defaults[.useDefaultSelectionColor] {
+//            Color.secondary
+//        }
+//        else {
+//            Defaults[.customSelectionColor]
+//        }
+//    }
     
     @State var currentDirection: ActionDirection = .noAction
 
     var body: some View {
+        var color: Color {
+            if useSystemAccentColor {
+                Color.accentColor
+            }
+            else {
+                customAccentColor
+            }
+        }
+        
+        var selectionColor: Color {
+            if useDefaultSelectionColor {
+                Color.secondary
+            }
+            else {
+                customSelectionColor
+            }
+        }
+
         VStack {
             Spacer()
             HStack {
                 Spacer()
                 ZStack {
                     ZStack {
-                        if Defaults[.fourParts] {
-                            ForEach(Defaults[.fourSegments]) { seg in
-                                CircleSegment(angle: seg.angle, radialMenuSize: radialMenuSize, icon: seg.icon, color: color, fourParts: Defaults[.fourParts])
+                        if fourParts {
+                            ForEach(fourSegments) { seg in
+                                CircleSegment(angle: seg.angle, radialMenuSize: radialMenuSize, icon: seg.icon, color: color, fourParts: fourParts)
                             }
                             
                             if currentDirection != .noAction {
-                                CircleSegment(angle: currentDirection.toAngle(fourParts: Defaults[.fourParts]), radialMenuSize: radialMenuSize, icon: Defaults[.fourSegments][currentDirection.toIndex(fourParts: Defaults[.fourParts])].icon, color: selectionColor, fourParts: Defaults[.fourParts])
+                                CircleSegment(angle: currentDirection.toAngle(fourParts: fourParts), radialMenuSize: radialMenuSize, icon: fourSegments[currentDirection.toIndex(fourParts: fourParts)].icon, color: selectionColor, fourParts: fourParts)
                             }
                         }
                         else {
-                            ForEach(Defaults[.eightActions]) { seg in
-                                CircleSegment(angle: seg.angle, radialMenuSize: radialMenuSize, icon: seg.icon, color: color, fourParts: Defaults[.fourParts])
+                            ForEach(eightActions) { seg in
+                                CircleSegment(angle: seg.angle, radialMenuSize: radialMenuSize, icon: seg.icon, color: color, fourParts: fourParts)
                             }
                             
                             if currentDirection != .noAction {
-                                CircleSegment(angle: currentDirection.toAngle(fourParts: Defaults[.fourParts]), radialMenuSize: radialMenuSize, icon: Defaults[.eightActions][currentDirection.toIndex(fourParts: Defaults[.fourParts])].icon, color: selectionColor, fourParts: Defaults[.fourParts])
+                                CircleSegment(angle: currentDirection.toAngle(fourParts: fourParts), radialMenuSize: radialMenuSize, icon: eightActions[currentDirection.toIndex(fourParts: fourParts)].icon, color: selectionColor, fourParts: fourParts)
                             }
                         }
                         
