@@ -18,8 +18,25 @@ class ActionEngine {
             executeBuiltinAction(action: action.builtinAction)
         case .shortcuts:
             executeShortcutAction(action: action.shortcutKeys)
+        case .appleScript:
+            executeAppleScript(action: action.scriptURL)
         default:
             print("under construction")
+        }
+    }
+    
+    static func executeAppleScript(action: URL?) {
+        if let url = action {
+            var error: NSDictionary?
+            if let scriptObject = NSAppleScript(contentsOf: url, error: &error) {
+                if let scriptResult = scriptObject
+                    .executeAndReturnError(&error)
+                    .stringValue {
+                        print(scriptResult)
+                } else if (error != nil)  {
+                    print("error: ",error!)
+                }
+            }
         }
     }
     

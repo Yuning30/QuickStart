@@ -25,7 +25,11 @@ struct ActionDetailPicker: View {
     @Binding var icon: String
     @Binding var builtinAction: BuiltinActions
     @Binding var shortcutKeys: Set<CGKeyCode>
+    @Binding var scriptURL: URL?
+    
     @State private var isPresented = false
+    @State private var showFileImporter = false
+    
     var actionType: ActionType
     
     var body: some View {
@@ -45,7 +49,26 @@ struct ActionDetailPicker: View {
         case .application:
             Text("application")
         case .appleScript:
-            Text("run apple script")
+            HStack {
+                Text("Select a script")
+                Spacer()
+                let labelStr = if let url = scriptURL { url.path } else { "No Script Selected" }
+                Button(labelStr) {
+                    showFileImporter.toggle()
+                }
+                .fileImporter(
+                    isPresented: $showFileImporter,
+                    allowedContentTypes: [.appleScript, .osaScript],
+                    allowsMultipleSelection: false
+                ) { result in
+                    switch result {
+                    case .success(let urls):
+                        scriptURL = urls[0]
+                    case .failure(let error):
+                        print(error)
+                    }
+                }
+            }
 //        default:
 //            Text("under construction")
         }
