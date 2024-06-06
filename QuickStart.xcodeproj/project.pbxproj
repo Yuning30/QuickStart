@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3E6020E02C10F3680004FB2E /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6020DF2C10F3680004FB2E /* Color+Extensions.swift */; };
+		3E6020E22C1182730004FB2E /* ShortcutKeycorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6020E12C1182730004FB2E /* ShortcutKeycorder.swift */; };
 		3E6165802C0D502400C1F048 /* ActionEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E61657F2C0D502400C1F048 /* ActionEngine.swift */; };
 		3E76B25A2C0F6E7700794406 /* RadialMenuSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76B2592C0F6E7700794406 /* RadialMenuSettingsView.swift */; };
 		3E76B25C2C0FCBA900794406 /* ActionConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76B25B2C0FCBA900794406 /* ActionConfigurationView.swift */; };
@@ -61,6 +62,7 @@
 		3E38335F2C09A68400561087 /* Angle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Angle+Extensions.swift"; sourceTree = "<group>"; };
 		3E38336D2C09AFC700561087 /* QuickStart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickStart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E6020DF2C10F3680004FB2E /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		3E6020E12C1182730004FB2E /* ShortcutKeycorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutKeycorder.swift; sourceTree = "<group>"; };
 		3E61657F2C0D502400C1F048 /* ActionEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionEngine.swift; sourceTree = "<group>"; };
 		3E76B2592C0F6E7700794406 /* RadialMenuSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialMenuSettingsView.swift; sourceTree = "<group>"; };
 		3E76B25B2C0FCBA900794406 /* ActionConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionConfigurationView.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				3E76B25B2C0FCBA900794406 /* ActionConfigurationView.swift */,
 				3E76B2632C1028EE00794406 /* KeybindingsSettingsView.swift */,
 				3E76B2672C102B6600794406 /* TriggerKeycorder.swift */,
+				3E6020E12C1182730004FB2E /* ShortcutKeycorder.swift */,
 				3E76B2692C102B9200794406 /* KeycorderModel.swift */,
 			);
 			path = Settings;
@@ -349,6 +352,7 @@
 				3EA6B5D22C0D0EEC0093F9C2 /* AppDelegate.swift in Sources */,
 				3EA6B5E42C0D1D0D0093F9C2 /* Notification+Extensions.swift in Sources */,
 				3EA6B5E62C0D1DDA0093F9C2 /* CGKeyCode+Extensions.swift in Sources */,
+				3E6020E22C1182730004FB2E /* ShortcutKeycorder.swift in Sources */,
 				3EA6B5D72C0D0F890093F9C2 /* EventMonitor.swift in Sources */,
 				3EF6A02E2C09B76B00BB4436 /* DirectionSelectorSquareSegment.swift in Sources */,
 				3E76B26C2C102BCB00794406 /* ShakeEffect.swift in Sources */,

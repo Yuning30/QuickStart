@@ -20,6 +20,7 @@ struct RadialMenuSettingsView: View {
     @State private var actionDirection: ActionDirection = .top
     @State private var icon = "star.fill"
     @State private var isPresented = false
+    @StateObject private var keycorderModel = KeycorderModel()
     
     var body: some View {
         Form {
@@ -69,14 +70,15 @@ struct RadialMenuSettingsView: View {
 
             
                 if fourParts {
-                    ActionDetailPicker(icon: $fourSegments[segIndex].icon, builtinAction: $fourSegments[segIndex].builtinAction, actionType: fourSegments[segIndex].actionType)
+                    ActionDetailPicker(icon: $fourSegments[segIndex].icon, builtinAction: $fourSegments[segIndex].builtinAction, shortcutKeys: $fourSegments[segIndex].shortcutKeys, actionType: fourSegments[segIndex].actionType)
                 }
                 else {
-                    ActionDetailPicker(icon: $eightActions[segIndex].icon, builtinAction: $eightActions[segIndex].builtinAction, actionType: eightActions[segIndex].actionType)
+                    ActionDetailPicker(icon: $eightActions[segIndex].icon, builtinAction: $eightActions[segIndex].builtinAction, shortcutKeys: $eightActions[segIndex].shortcutKeys, actionType: eightActions[segIndex].actionType)
                 }
 
             }
         }
+        .environmentObject(keycorderModel)
         .formStyle(.grouped)
         .scrollDisabled(true)
     }

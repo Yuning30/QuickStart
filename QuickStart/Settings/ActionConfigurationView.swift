@@ -24,6 +24,7 @@ struct ActionTypePicker: View {
 struct ActionDetailPicker: View {
     @Binding var icon: String
     @Binding var builtinAction: BuiltinActions
+    @Binding var shortcutKeys: Set<CGKeyCode>
     @State private var isPresented = false
     var actionType: ActionType
     
@@ -35,9 +36,18 @@ struct ActionDetailPicker: View {
                     action in Text(action.rawValue)
                 }
             }
-            
-        default:
-            Text("under construction")
+        case .shortcuts:
+            HStack {
+                Text("Pick a shortcut")
+                Spacer()
+                ShortcutKeycorder($shortcutKeys)
+            }
+        case .application:
+            Text("application")
+        case .appleScript:
+            Text("run apple script")
+//        default:
+//            Text("under construction")
         }
         
         HStack {

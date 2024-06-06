@@ -28,6 +28,7 @@ enum BuiltinActions: String, Identifiable, CaseIterable, Codable, Defaults.Seria
 struct SegmentDescription: Codable, Identifiable, Hashable, Equatable, Defaults.Serializable {
     var actionType: ActionType = .builtin
     var builtinAction: BuiltinActions = .startPause
+    var shortcutKeys: Set<CGKeyCode> = [.kVK_F1]
     var icon: String
     var angle: Double
     var id = UUID()
