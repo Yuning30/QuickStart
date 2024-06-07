@@ -299,6 +299,11 @@ class LoopManager: ObservableObject {
             ActionEngine.executeAction(direction: currentAction)
         }
         
+        currentAction = .noAction
+        DispatchQueue.main.async {
+            Notification.Name.updateUIDirection.post(userInfo: ["action": self.currentAction])
+        }
+        
         isLoopActive = false
         LoopManager.sidesToAdjust = nil
         LoopManager.lastTargetFrame = .zero
