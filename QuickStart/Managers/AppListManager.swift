@@ -34,9 +34,8 @@ class AppListManager: ObservableObject {
 
     private func startQuery() {
         qry.predicate = NSPredicate(format: "kMDItemContentType == 'com.apple.application-bundle'")
-        if let appFolder = FileManager.default.urls(for: .applicationDirectory, in: .localDomainMask).first {
-            qry.searchScopes = [appFolder]
-        }
+        let appFolders = FileManager.default.urls(for: .allApplicationsDirectory, in: .allDomainsMask)
+        qry.searchScopes = appFolders
 
         NotificationCenter.default.addObserver(
             forName: .NSMetadataQueryDidFinishGathering,
