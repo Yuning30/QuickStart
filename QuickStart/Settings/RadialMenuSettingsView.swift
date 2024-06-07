@@ -70,10 +70,10 @@ struct RadialMenuSettingsView: View {
 
             
                 if fourParts {
-                    ActionDetailPicker(icon: $fourSegments[segIndex].icon, builtinAction: $fourSegments[segIndex].builtinAction, shortcutKeys: $fourSegments[segIndex].shortcutKeys, scriptURL: $fourSegments[segIndex].scriptURL, actionType: fourSegments[segIndex].actionType)
+                    ActionDetailPicker(icon: $fourSegments[segIndex].icon, builtinAction: $fourSegments[segIndex].builtinAction, shortcutKeys: $fourSegments[segIndex].shortcutKeys, scriptURL: $fourSegments[segIndex].scriptURL, appName: $fourSegments[segIndex].appName, appInstallationPath: $fourSegments[segIndex].appInstallationPath, actionType: fourSegments[segIndex].actionType)
                 }
                 else {
-                    ActionDetailPicker(icon: $eightActions[segIndex].icon, builtinAction: $eightActions[segIndex].builtinAction, shortcutKeys: $eightActions[segIndex].shortcutKeys, scriptURL: $fourSegments[segIndex].scriptURL, actionType: eightActions[segIndex].actionType)
+                    ActionDetailPicker(icon: $eightActions[segIndex].icon, builtinAction: $eightActions[segIndex].builtinAction, shortcutKeys: $eightActions[segIndex].shortcutKeys, scriptURL: $eightActions[segIndex].scriptURL, appName: $eightActions[segIndex].appName, appInstallationPath: $eightActions[segIndex].appInstallationPath, actionType: eightActions[segIndex].actionType)
                 }
 
             }

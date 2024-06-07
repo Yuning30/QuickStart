@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3E6020E02C10F3680004FB2E /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6020DF2C10F3680004FB2E /* Color+Extensions.swift */; };
 		3E6020E22C1182730004FB2E /* ShortcutKeycorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6020E12C1182730004FB2E /* ShortcutKeycorder.swift */; };
+		3E6020E42C124E860004FB2E /* AppListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6020E32C124E860004FB2E /* AppListManager.swift */; };
+		3E6020E62C12572C0004FB2E /* NSImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6020E52C12572C0004FB2E /* NSImage+Extensions.swift */; };
 		3E6165802C0D502400C1F048 /* ActionEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E61657F2C0D502400C1F048 /* ActionEngine.swift */; };
 		3E76B25A2C0F6E7700794406 /* RadialMenuSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76B2592C0F6E7700794406 /* RadialMenuSettingsView.swift */; };
 		3E76B25C2C0FCBA900794406 /* ActionConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76B25B2C0FCBA900794406 /* ActionConfigurationView.swift */; };
@@ -63,6 +65,8 @@
 		3E38336D2C09AFC700561087 /* QuickStart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickStart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E6020DF2C10F3680004FB2E /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		3E6020E12C1182730004FB2E /* ShortcutKeycorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutKeycorder.swift; sourceTree = "<group>"; };
+		3E6020E32C124E860004FB2E /* AppListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListManager.swift; sourceTree = "<group>"; };
+		3E6020E52C12572C0004FB2E /* NSImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+Extensions.swift"; sourceTree = "<group>"; };
 		3E61657F2C0D502400C1F048 /* ActionEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionEngine.swift; sourceTree = "<group>"; };
 		3E76B2592C0F6E7700794406 /* RadialMenuSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialMenuSettingsView.swift; sourceTree = "<group>"; };
 		3E76B25B2C0FCBA900794406 /* ActionConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionConfigurationView.swift; sourceTree = "<group>"; };
@@ -188,6 +192,7 @@
 				3EA6B5D32C0D0F450093F9C2 /* LoopManager.swift */,
 				3EA6B5E92C0D1F310093F9C2 /* PermissionManager.swift */,
 				3EA6B5D92C0D10330093F9C2 /* KeybindMonitor.swift */,
+				3E6020E32C124E860004FB2E /* AppListManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				3E38335F2C09A68400561087 /* Angle+Extensions.swift */,
+				3E6020E52C12572C0004FB2E /* NSImage+Extensions.swift */,
 				3EA6B5ED2C0D437B0093F9C2 /* View+Extensions.swift */,
 				3EA6B5E02C0D17030093F9C2 /* CGGeometry+Extensions.swift */,
 				3EA6B5E32C0D1D0D0093F9C2 /* Notification+Extensions.swift */,
@@ -328,6 +334,7 @@
 				3E9D68282C0EB6BA00A6CDA4 /* CircleSegment.swift in Sources */,
 				3E9D682C2C0ECB7500A6CDA4 /* SettingsView.swift in Sources */,
 				3E9D68332C0ED88A00A6CDA4 /* MoreSettingsView.swift in Sources */,
+				3E6020E42C124E860004FB2E /* AppListManager.swift in Sources */,
 				3EF6A02C2C09B76600BB4436 /* RadialMenuView.swift in Sources */,
 				3E76B26A2C102B9200794406 /* KeycorderModel.swift in Sources */,
 				3E76B2642C1028EE00794406 /* KeybindingsSettingsView.swift in Sources */,
@@ -355,6 +362,7 @@
 				3E6020E22C1182730004FB2E /* ShortcutKeycorder.swift in Sources */,
 				3EA6B5D72C0D0F890093F9C2 /* EventMonitor.swift in Sources */,
 				3EF6A02E2C09B76B00BB4436 /* DirectionSelectorSquareSegment.swift in Sources */,
+				3E6020E62C12572C0004FB2E /* NSImage+Extensions.swift in Sources */,
 				3E76B26C2C102BCB00794406 /* ShakeEffect.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

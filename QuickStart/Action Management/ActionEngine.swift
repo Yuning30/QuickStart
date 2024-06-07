@@ -20,8 +20,18 @@ class ActionEngine {
             executeShortcutAction(action: action.shortcutKeys)
         case .appleScript:
             executeAppleScript(action: action.scriptURL)
-        default:
-            print("under construction")
+        case .application:
+            executeStartApp(action: action.appInstallationPath)
+        }
+    }
+    
+    static func executeStartApp(action: String?) {
+        if let url = action {
+            let openURL = NSURL(fileURLWithPath: url, isDirectory: true) as URL
+            let configuration = NSWorkspace.OpenConfiguration()
+            NSWorkspace.shared.openApplication(at: openURL,
+                                               configuration: configuration,
+                                               completionHandler: nil)
         }
     }
     

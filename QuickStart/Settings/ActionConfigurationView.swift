@@ -26,9 +26,14 @@ struct ActionDetailPicker: View {
     @Binding var builtinAction: BuiltinActions
     @Binding var shortcutKeys: Set<CGKeyCode>
     @Binding var scriptURL: URL?
+    @Binding var appName: String?
+    @Binding var appInstallationPath: String?
     
     @State private var isPresented = false
     @State private var showFileImporter = false
+    @State private var appImage: NSImage? = nil
+    
+    @EnvironmentObject var appListManager: AppListManager
     
     var actionType: ActionType
     
@@ -47,7 +52,22 @@ struct ActionDetailPicker: View {
                 ShortcutKeycorder($shortcutKeys)
             }
         case .application:
-            Text("application")
+            HStack {
+                
+                Text("Select a app")
+                Spacer()
+                Menu(
+                    content: { installedAppsMenu() },
+                    label: { 
+                        if appImage == nil {
+                            Image(systemName: "nosign.app.fill")
+                        }
+                        else {
+                            Image(nsImage: appImage!)
+                        }
+                        Text(appName ?? "No app selected") }
+                )
+            }
         case .appleScript:
             HStack {
                 Text("Select a script")
@@ -84,7 +104,39 @@ struct ActionDetailPicker: View {
             }
         }
     }
+    
+    @ViewBuilder
+    func installedAppsMenu() -> some View {
+        let apps = appListManager.installedApps
+            .grouped {
+                $0.installationFolder
+            }
+        let installationFolders = apps.keys.sorted {
+            $0.localizedCaseInsensitiveCompare($1) == .orderedAscending
+        }
+
+        ForEach(installationFolders, id: \.self) { folder in
+            Section(folder) {
+                let appsInFolder = apps[folder]!.sorted {
+                    $0.displayName.localizedCaseInsensitiveCompare($1.displayName) == .orderedAscending
+                }
+                ForEach(appsInFolder) { app in
+                    Button(action: {
+                        appImage = app.icon.resized(to: NSSize(width: 16.0, height: 16.0))
+                        appName = app.displayName
+                        appInstallationPath = app.installationPath
+                    }, label: {
+                        // Resizing the image with SwiftUI did not work.  Therefore we change the size of the NSImage.
+                        Image(nsImage: app.icon.resized(to: NSSize(width: 16.0, height: 16.0)))
+                        Text(app.displayName)
+                    })
+                }
+            }
+        }
+    }
 }
+
+
 
 struct ActionConfigurationView: View {
     @Binding var fourParts: Bool

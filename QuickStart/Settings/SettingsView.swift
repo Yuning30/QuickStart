@@ -11,7 +11,7 @@ import Sparkle
 struct SettingsView: View {
     @State var currentSettingsTab = SettingsTab.general
     @StateObject private var updater = SoftwareUpdater()
-//    private var appListManager = AppListManager()
+    private var appListManager = AppListManager()
 
     var body: some View {
         TabView(selection: $currentSettingsTab) {
@@ -24,6 +24,7 @@ struct SettingsView: View {
                 .frame(width: 450)
 
             RadialMenuSettingsView()
+                .environmentObject(appListManager)
                 .tag(SettingsTab.radialMenu)
                 .tabItem {
                     Image(systemName: "circle.dashed")

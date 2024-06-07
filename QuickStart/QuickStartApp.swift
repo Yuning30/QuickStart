@@ -16,7 +16,7 @@ struct QuickStartApp: App {
         Settings {
             SettingsView()
         }
-        MenuBarExtra("Loop", systemImage: "hammer") {
+        MenuBarExtra("Loop", systemImage: "circle.dashed") {
             SettingsLink(
                 label: {
                     Text("Settings…")

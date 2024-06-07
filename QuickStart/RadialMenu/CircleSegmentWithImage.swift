@@ -30,6 +30,8 @@ struct SegmentDescription: Codable, Identifiable, Hashable, Equatable, Defaults.
     var builtinAction: BuiltinActions = .startPause
     var shortcutKeys: Set<CGKeyCode> = [.kVK_F1]
     var scriptURL: URL? = nil
+    var appName: String? = nil
+    var appInstallationPath: String? = nil
     var icon: String
     var angle: Double
     var id = UUID()
